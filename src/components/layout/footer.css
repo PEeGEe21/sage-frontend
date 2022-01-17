@@ -1,0 +1,11 @@
+.top-footer .footer-top-cap span a {
+    font-size: 60px;
+    display: block;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.top-footer .footer-top-cap img {
+    margin-bottom: 20px;
+}

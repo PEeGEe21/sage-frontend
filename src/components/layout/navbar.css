@@ -1,0 +1,28 @@
+.main-nav {
+    float: none !important;
+}
+
+.header-sticky .site-header{
+       
+	-webkit-transition: all 400ms ease !important;
+	-moz-transition: all 400ms ease !important;
+	-ms-transition: all 400ms ease !important;
+	-o-transition: all 400ms ease !important;
+	transition: all 400ms ease !important;
+    /* z-index: 99; */
+}
+.header-sticky .site-header.minimized{
+    transition: all 400ms ease !important;
+}
+
+.header-sticky .site-header.minimized {
+    z-index: 99 !important;
+}
+
+.header-sticky .site-header.scrolled
+{
+    /* z-index: 99; */
+
+	top: -57px;
+    transition: all 400ms ease;
+}

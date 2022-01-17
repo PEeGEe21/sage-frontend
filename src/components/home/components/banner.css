@@ -1,0 +1,27 @@
+.img-banner{
+        max-width: 100%;
+        width: 600px;
+        height: 350px;
+        transition: all 0.5s ease;
+        transform: scale(1.01);
+        
+
+
+    }
+    .img-banner:hover{
+        transition: all 0.5s ease;
+  transform: scale(1.20) !important;
+  /* -moz-transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  /* -o-transform: scale(1.01); */
+    }
+
+    .banner-img{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner-height{
+      height: 200px;
+    }
