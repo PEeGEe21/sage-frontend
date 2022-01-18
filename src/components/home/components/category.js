@@ -84,10 +84,11 @@ class Category extends Component {
                 console.log('Error');
       });
       }
-    
+    //   return this.state.categoriesData.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
+
 
       getCategoryRow(){
-        return this.state.categoriesData.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
+        return CategoryItems.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
     
             return(
                 <div key={cat.id} obj={cat} className="col-lg-4 col-md-6 col-sm-12 p-4 cat" >

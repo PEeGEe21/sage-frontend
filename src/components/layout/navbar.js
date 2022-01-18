@@ -140,7 +140,7 @@ const Navbar = () =>{
                     <div className="site-menu container">
                         <nav id="site-navigation" className="main-nav primary-nav nav ">
                             <ul className="menu mx-auto">
-                                <li className="nav_item"><a href="/">Shop</a></li>
+                                <li className="nav_item"><a href="/">Home</a></li>
                                 <li className="nav_item"><a href="/our-menu">Our Menu</a></li>
                                 <li className="nav_item"><a href="/categories">Categories</a>
                                 

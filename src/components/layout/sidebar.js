@@ -13,7 +13,7 @@ function MobileNav() {
             <div className="primary-mobile-nav header-v1" id="primary-mobile-nav" role="navigation">
                 <a href="#" className="close-canvas-mobile-panel">×</a>
                 <ul className="menu">
-                    <li className="current-menu-item"><a href="/">Shop</a></li>
+                    <li className=""><a href="/">Home</a></li>
                     <li><a href="/our-menu" className="">Our Menu</a></li>
                     <li><a href="/categories" className="">Categories</a></li>
                     <li><a href="/" className="">About Us</a></li>
