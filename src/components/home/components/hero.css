@@ -202,7 +202,7 @@
     width: 180px;
     margin-top: 20px;
     border-radius: 10px;
-    font-size: 14px;
+    /* font-size: 14px; */
 }
 
 .hero-btn:hover{
