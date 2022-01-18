@@ -55,7 +55,7 @@ const Menu = () => {
         
         return products.slice(0, 12).map((prod)=>{
             return(
-                <div className="col-lg-2 col-md-6 col-sm-12" key={prod.id}>
+                <div className="col-lg-3 col-md-4 col-sm-12" key={prod.id}>
                     <div className="item p-3" >
                         <Link  to={`/our-menu/product/${prod.id}`}>
 
