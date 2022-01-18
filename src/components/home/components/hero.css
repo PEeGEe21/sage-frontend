@@ -168,16 +168,7 @@
 
     
 }
-@media only screen and (max-width: 568px) {
-    section.slider{
-        padding: 3em 0 3em 0;
-    }
 
-    
-    
-
-    
-}
 
 
 .hero-main-img .hero-main-img-div:before{
@@ -253,6 +244,22 @@
 .hero-btn:hover i{
     opacity: 1;
     /* right: 0; */
+}
+
+
+@media only screen and (max-width: 568px) {
+    section.slider{
+        padding: 3em 0 3em 0;
+    }
+
+    
+    .hero-btn{
+        font-size: 14px;
+        padding: 13px;
+        width: 150px;
+    }
+
+    
 }
 
 
