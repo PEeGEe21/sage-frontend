@@ -129,8 +129,10 @@
 
 @media only screen and (max-width: 568px) {
     .slider .caption {
-        font-size: 45px;
+        font-size: 40px;
         line-height: 45px;
+        word-wrap: break-word;
+
     }
     .slider .subtext{
         font-size: 19px;
@@ -189,3 +191,38 @@
 }
 
 
+
+.hero-btn{
+    background: rgb(29, 121, 78);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    width: 180px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.hero-btn:hover{
+    color: white;
+}
+
+.hero-btn:hover i{
+    -webkit-transition: translateX(5px);
+    -ms-transition: translateX(5px);
+    transform: translateX(5px);
+    opacity: 1;
+    color: #fff;
+    
+}
+.hero-btn i{
+    color: #fff;
+    font-size: 12px;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-left: 10px;
+
+}

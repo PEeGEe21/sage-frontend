@@ -1,6 +1,13 @@
 import React from 'react'
+import './searchform.css'
+
+import {Badge} from "@material-ui/core"
+import { Link, withRouter } from 'react-router-dom';
+import {ShoppingCartOutlined } from '@material-ui/icons';
 
 function MobileNav() {
+    const quantity = null
+
     return (
         <>
             <div className="primary-mobile-nav header-v1" id="primary-mobile-nav" role="navigation">
@@ -12,11 +19,20 @@ function MobileNav() {
                     <li><a href="/" className="">About Us</a></li>
                     <li><a href="/" className="">Blog</a></li>
                     <li><a href="/" className="">Contact Us</a></li>
-                    <li className="extra-menu-item menu-item-search last-child">
-                        <a href="#" className="toggle-search"><i className="fa fa-search" aria-hidden="true"></i></a>
-                        <form className="search-form">
+                    <li>
+                    <Link to="/cart">
+                        <Badge badgeContent={quantity} color="primary">
+                                                  
+                            <ShoppingCartOutlined/>
+                        </Badge>
+                        </Link>
+                    </li>
+                    <li className="extra-menu-item last-child">
+                        <form className="sidebar-search-form">
                             <input className="search-field" placeholder="Search..." defaultValue="" name="s" type="search"/>
-                            <input className="search-submit" defaultValue="Search" type="submit"/>
+                            <button className="search-btn" type="submit">
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                            </button>
                         </form>
                     </li>
 

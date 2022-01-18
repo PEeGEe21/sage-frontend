@@ -60,7 +60,7 @@ const Navbar = () =>{
 
             <div id="mf-header-minimized" className="mf-header-minimized mf-header-v5"></div>
             <header id="masthead" className="site-header clearfix">
-                <div className="header-main clearfix ">
+                <div className="header-main clearfix container">
                     <div className="site-contact">
                         <div className="container">
                             <div className="row menu-row">
@@ -72,9 +72,15 @@ const Navbar = () =>{
                                 </div>
                                 <div className="site-extra-text hidden-md hidden-sm hidden-xs">
                                     <div className="widget induscity-social-links-widget">
-                                        <a href="#" className="share-facebook tooltip-enable social" title="Facebook" target="_blank"><i className="fab fa-facebook"></i></a>
-                                        <a href="#" className="share-twitter tooltip-enable social" rel="nofollow" title="Twitter" target="_blank"><i className="fab fa-twitter"></i></a>
-                                        <a href="#" className="share-skype tooltip-enable social" rel="nofollow" title="Instagram" target="_blank"><i className="fab fa-instagram"></i></a>
+                                        <a href="#" className="share-facebook tooltip-enable social" title="Facebook" target="_blank">
+                                          <i className="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" className="share-twitter tooltip-enable social" rel="nofollow" title="Twitter" target="_blank">
+                                          <i className="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" className="share-skype tooltip-enable social" rel="nofollow" title="Instagram" target="_blank">
+                                          <i className="fab fa-instagram"></i>
+                                          </a>
                                         {/* <a href="#" className="share-linkedin tooltip-enable social" rel="nofollow" title="Linkedin" target="_blank"><i className="fab fa-linkedin"></i></a> */}
                                     </div>
                                     <div className="widget_text widget widget_custom_html">
@@ -183,8 +189,11 @@ const Navbar = () =>{
 
                         
                     </div>
+                    
                 </div>
             </header>
+
+            
 
             
       </React.Fragment>

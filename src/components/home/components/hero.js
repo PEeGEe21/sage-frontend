@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
-
+import './featured'
 import '../style.css'
 import './hero.css'
 // import styled from 'styled-components'
@@ -53,32 +53,17 @@ export default function Hero(){
 					{/* <div className="owl-carousel owl-theme home_slider owl-loaded owl-drag"> */}
 						
 
-                                <div className="container">
+                                <div className="container h-100">
 
                                     <div className="row  d-flex align-items-center justify-content-between">
-                                        <div className="col-lg-6 col-md-7 col-sm-12 ">
-                                            <div className="subtext">lorem Ipsum Dolor</div>
+                                        <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap">
+                                            {/* <div className="subtext">lorem Ipsum Dolor</div> */}
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext">Get started, Create an account and start enjoying our service</div>
+                                            <div>
+                                                <a href="" class="hero-btn">Visit Our Shop <i class="fa fa-arrow-right"></i></a>
+                                            </div>
 
-                                            {/* <div className="card h-100 border-0 p-3 p-lg-3">
-                                                <div className="card-body mb-5 ">
-                                                    <h1 className="mt-4 mb-3">
-                                                        We are a well known courier service
-                                                    </h1>
-                                                    <span className="lined mb-3"></span>
-                                                    <p className="mb-4 h6">
-                                                        Get started, Create an account and start enjoying our service
-                                                    </p>
-                                                        <a href="" className="btn btn-outline-primary h-12 d-flex justify-content-between align-items-center arrow-link px-3">Get Started <span>
-                                                            <i className="fa fa-arrow-right mini-icon"></i>
-                                                        </span>
-                                                    </a>
-
-
-                                                    
-                                                </div>
-                                            </div> */}
                                         </div>
                                         <div className="col-lg-6 col-md-5 col-sm-12 d-none d-lg-block">
                                             <div className=" hero-main-img d-flex align-items-center justify-content-between" style={{width: '500px'}}>
@@ -90,6 +75,7 @@ export default function Hero(){
                                             </div> 
                                         </div>
                                     </div>
+
                                 </div> 
 
                                 <div className="container">
