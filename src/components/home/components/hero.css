@@ -132,16 +132,22 @@
         font-size: 40px;
         line-height: 45px;
         word-wrap: break-word;
+        margin-left: 5px;
+
 
     }
     .slider .subtext{
         font-size: 19px;
         line-height: 19px;
+        margin-left: 5px;
+
     }
 
     .slider .paratext{
         line-height: 19px;
         font-size: 14px;
+        margin-left: 5px;
+
     }
 
     
@@ -166,6 +172,8 @@
     section.slider{
         padding: 3em 0 3em 0;
     }
+
+    
     
 
     
