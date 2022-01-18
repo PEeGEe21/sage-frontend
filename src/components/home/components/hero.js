@@ -59,9 +59,9 @@ export default function Hero(){
                                         <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap">
                                             {/* <div className="subtext">lorem Ipsum Dolor</div> */}
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
-                                            <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying our service</div>
+                                            <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>
-                                                <a href="" className="hero-btn">Visit Our Shop <i className="fa fa-arrow-right"></i></a>
+                                                <a href="" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
                                             </div>
 
                                         </div>
@@ -95,9 +95,9 @@ export default function Hero(){
                                         <div className="col-lg-6 col-md-7 col-sm-12 ">
                                             <div className="subtext">lorem Ipsum Dolor</div>
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
-                                            <div className="paratext">Get started, Create an account and start enjoying our service</div>
+                                            <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>
-                                                <a href="" className="hero-btn">Visit Our Shop <i className="fa fa-arrow-right"></i></a>
+                                                <a href="" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
                                             </div>
                                         </div>
                                     </div>

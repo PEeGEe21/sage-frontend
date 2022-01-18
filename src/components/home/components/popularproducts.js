@@ -101,7 +101,7 @@ class Recommended extends Component {
 
     return (
 
-            <section >
+            <section style={{background:'#f2f2f2'}}>
                 <div className="container">
                     <div className="row d-flex align-items-center text-center justify-content-center mb-4 pb-4">
                         <div className="col-12 mb-2 pb-2 section-title">

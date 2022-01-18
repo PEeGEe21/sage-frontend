@@ -89,7 +89,7 @@ class Home extends Component {
                 <Banner />
 
                 <PopularProducts />
-                <Newsletter />
+                {/* <Newsletter /> */}
                 <Testimonial />
                 <ContentArea />
                 <Footer />
