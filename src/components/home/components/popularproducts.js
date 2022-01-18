@@ -9,6 +9,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css'
 import 'owl.carousel/dist/assets/owl.theme.default.css'
 import './recommended.css'
 import {RecommendedProducts} from './../../data'
+import {PopularProductsItems} from '../../data'
+
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
@@ -21,7 +23,7 @@ import LikeButton from './likebutton';
 
 
 
-class Recommended extends Component {
+class PopularProducts extends Component {
   // function Sidebar() {
   constructor(props) {
     super(props);
@@ -96,6 +98,8 @@ class Recommended extends Component {
   }
 
 //   style={{background: '#f2f2f2'}}
+// {this.state.productsData.sort(()=> Math.random() - Math.random())
+
 
   render() {
 
@@ -122,7 +126,7 @@ class Recommended extends Component {
                         </div>
                         <div className="col-lg-7">
                             <div className="row">
-                            {this.state.productsData.sort(()=> Math.random() - Math.random())
+                            {PopularProductsItems.sort(()=> Math.random() - Math.random())
                     .slice(0, 3).map((prod, i)=>(
                         <div className="col-lg-12 col-md-6 col-sm-12" key={prod.id}>
                             <div className="item p-3">
@@ -184,4 +188,4 @@ class Recommended extends Component {
   }
 }
 
-export default Recommended;
+export default PopularProducts;

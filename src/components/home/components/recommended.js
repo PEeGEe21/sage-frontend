@@ -123,6 +123,8 @@ class Recommended extends Component {
   }
 
 
+  // {this.state.productsData.sort(()=> Math.random() - Math.random())
+
 
   render() {
 
@@ -157,7 +159,7 @@ class Recommended extends Component {
                         
                         > */}
                         <div className="row recommended">
-                        {this.state.productsData.sort(()=> Math.random() - Math.random())
+                        {RecommendedProducts.sort(()=> Math.random() - Math.random())
                         .slice(0, 4).map((prod, i)=>(
                             <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
                                 <div className="item p-3" >
