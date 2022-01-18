@@ -133,6 +133,8 @@
         line-height: 45px;
         word-wrap: break-word;
         margin-left: 5px;
+        margin-top: 10px;
+
 
 
     }
@@ -140,6 +142,7 @@
         font-size: 19px;
         line-height: 19px;
         margin-left: 5px;
+        /* margin-top: 10px; */
 
     }
 
@@ -147,6 +150,8 @@
         line-height: 19px;
         font-size: 14px;
         margin-left: 5px;
+        margin-top: 10px;
+
 
     }
 
