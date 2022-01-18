@@ -58,14 +58,21 @@ $(document).ready(function()
 	{
 		if($(window).scrollTop() > 100)
 		{
-			header.addClass('minimized');
+			header.addClass('scrolled');
 		}
 		else
 		{
-			header.removeClass('minimized');
+			header.removeClass('scrolled');
 		}
 	}
 
+	// :: 9.0 Sticky Active Code
+    if ($.fn.sticky) {
+        $(".site-header").sticky({
+            topSpacing: 0
+        });
+    }
+	
 	/* 
 
 	3. Init Home Slider

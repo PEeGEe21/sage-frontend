@@ -1,7 +1,7 @@
 .img-banner{
         max-width: 100%;
         width: 600px;
-        height: 350px;
+        height: 300px;
         transition: all 0.5s ease;
         transform: scale(1.01);
         

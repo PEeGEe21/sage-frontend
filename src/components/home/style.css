@@ -1749,7 +1749,7 @@ Navigations
     overflow-x: hidden;
     overflow-y: auto;
     color: #848484;
-    z-index: 9999;
+    z-index: 99999 !important;
 }
 
 .primary-mobile-nav .mobile-nav-content {

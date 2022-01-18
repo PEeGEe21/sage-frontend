@@ -58,12 +58,12 @@ const Navbar = () =>{
         <Announcement />
           <TopBar />
 
-            <div id="mf-header-minimized" className="mf-header-minimized mf-header-v5"></div>
-            <header id="masthead" className="site-header clearfix">
+            {/* <div id="mf-header-minimized" className="mf-header-minimized mf-header-v5"></div> */}
+            <header id="masthead" className="site-header">
                 <div className="header-main clearfix container">
                     <div className="site-contact">
                         <div className="container">
-                            <div className="row menu-row">
+                            <div className="menu-row d-flex align-items-center justify-content-between">
                                 <div className="site-logo col-md-9 col-sm-9 col-xs-9">
                                     <a href="/" className="logo">
                                         <img src="/assets/logo.svg" alt="Sage" className="logo"/>

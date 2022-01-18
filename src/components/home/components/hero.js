@@ -59,9 +59,9 @@ export default function Hero(){
                                         <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap">
                                             {/* <div className="subtext">lorem Ipsum Dolor</div> */}
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
-                                            <div className="paratext">Get started, Create an account and start enjoying our service</div>
+                                            <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying our service</div>
                                             <div>
-                                                <a href="" class="hero-btn">Visit Our Shop <i class="fa fa-arrow-right"></i></a>
+                                                <a href="" className="hero-btn">Visit Our Shop <i className="fa fa-arrow-right"></i></a>
                                             </div>
 
                                         </div>
@@ -69,7 +69,7 @@ export default function Hero(){
                                             <div className=" hero-main-img d-flex align-items-center justify-content-between" style={{width: '500px'}}>
                                                 <div className=" hero-main-img-div">
 
-                                                <img src="/assets/FoodPhotography.jpg" className="img-fluid" style={{height: '470px', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70% ', objectFit:'cover', border: '4px solid #000'}} loading="lazy"/>
+                                                <img src="/assets/food.jpg" className="img-fluid" style={{height: '470px', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70% ', objectFit:'cover', border: '4px solid #000'}} loading="lazy"/>
 
                                                 </div>
                                             </div> 
@@ -85,7 +85,7 @@ export default function Hero(){
 
                                             <div className=" hero-main-img-div" >
 
-                                                <img src="/assets/FoodPhotography.jpg" className="img-fluid" style={{height: '470px', borderRadius: '69% 31% 40% 60% / 51% 64% 36% 49% ', objectFit:'cover', border: '4px solid #000'}} loading="lazy"/>
+                                                <img src="/assets/food2.jpg" className="img-fluid" style={{height: '470px', borderRadius: '69% 31% 40% 60% / 51% 64% 36% 49% ', objectFit:'cover', border: '4px solid #000'}} loading="lazy"/>
 
                                                 </div>
 
@@ -96,6 +96,9 @@ export default function Hero(){
                                             <div className="subtext">lorem Ipsum Dolor</div>
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext">Get started, Create an account and start enjoying our service</div>
+                                            <div>
+                                                <a href="" className="hero-btn">Visit Our Shop <i className="fa fa-arrow-right"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div> 
