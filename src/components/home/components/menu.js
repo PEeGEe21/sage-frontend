@@ -27,7 +27,7 @@ const Menu = () => {
 
         const getProducts = async ()=>{
             try{
-                const res = await axios.get( "http://127.0.0.1:8000/api/products/", { cancelToken: source.token } );
+                const res = await axios.get( "https://sage-server.herokuapp.com/api/products/", { cancelToken: source.token } );
                 setProducts(res.data)
                 // console.log(res)
             }catch(err){
