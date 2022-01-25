@@ -81,7 +81,7 @@ const CategoryProducts = ({cat, filters, sort}) => {
                             <div className=" my-2">
                                 {prod.deleted_price && 
 
-                                   <span className="mr-3 d-inline-block" style={{marginRight:"10px"}}>
+                                   <span className="mr-3" style={{marginRight:"10px"}}>
                                         <del> $<span>{prod.deleted_price}</span> </del>
                                 </span> 
                                 }
