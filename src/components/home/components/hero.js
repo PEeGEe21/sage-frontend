@@ -58,7 +58,7 @@ export default function Hero(){
 
                                     <div className="row  d-flex align-items-center justify-content-between">
                                         <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap">
-                                            {/* <div className="subtext">lorem Ipsum Dolor</div> */}
+                                            <div className="subtext">lorem Ipsum Dolor</div>
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>

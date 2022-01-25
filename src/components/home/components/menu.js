@@ -118,7 +118,7 @@ const Menu = () => {
                                 {getProductRow()}
 
                                <div className="mf-button d-flex justify-content-center align-center style-1 margtop40">
-                                    <Link to="/our-menu" className="mf-btn-2 view-more d-block d-lg-none ">View More</Link>
+                                    <a href="/our-menu" className="mf-btn-2 view-more d-block d-lg-none ">View More</a>
                                 </div> 
                         </div>
 

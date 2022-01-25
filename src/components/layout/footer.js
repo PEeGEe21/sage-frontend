@@ -27,7 +27,7 @@ class Footer extends Component{
                             <div className="row justify-content-center">
                                 <div className="col-lg-6">
                                         <div className="footer-top-cap text-center">
-                                            <div className="mb-4 text-white">
+                                            <div className="mb-2 mb-lg-4 text-white">
                                                 <a href="/">
                                                     <img src="/assets/logo-white.svg" className="img-fluid" />
                                                 </a>
