@@ -92,7 +92,7 @@ class Category extends Component {
     
             return(
                 <div key={cat.id} obj={cat} className="col-lg-4 col-md-6 col-sm-12 p-4 cat" >
-                    <Link to={`/category/${cat.name}`}>
+                    <a href={`/category/${cat.name}`}>
                         <div className="item mb-2">
         
                             <div className="media align-items-center justify-space-between">
@@ -106,7 +106,7 @@ class Category extends Component {
                             </div>
                             
                         </div>
-                    </Link>
+                    </a>
                 </div>
     
     
