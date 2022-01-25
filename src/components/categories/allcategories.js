@@ -21,7 +21,7 @@ const Categories = () => {
 
         const getCategories = async ()=>{
             try{
-                const res = await axios.get( "http://127.0.0.1:8000/api/category/", { cancelToken: source.token } );
+                const res = await axios.get( "https://sage-server.herokuapp.com/api/category/", { cancelToken: source.token } );
                 setCategory(res.data)
                 // console.log(res)
             }catch(err){
