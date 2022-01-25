@@ -72,7 +72,7 @@ class Category extends Component {
 
       componentDidMount(){
           axios
-            .get('http://127.0.0.1:8000/api/category')
+            .get('https://sage-server.herokuapp.com/api/category')
             .then((response) => {
                 //   console.log(response.data)
                 this.setState({
@@ -84,11 +84,11 @@ class Category extends Component {
                 console.log('Error');
       });
       }
-    //   return this.state.categoriesData.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
+    //   return CategoryItems.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
 
 
       getCategoryRow(){
-        return CategoryItems.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
+        return this.state.categoriesData.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
     
             return(
                 <div key={cat.id} obj={cat} className="col-lg-4 col-md-6 col-sm-12 p-4 cat" >
@@ -128,7 +128,7 @@ class Category extends Component {
 
         return(
             <React.Fragment>
-                <section style={{background: '#f2f2f2'}}>
+                <section >
                     <div className="container">
                         <div className="row d-flex align-items-center text-center justify-content-center mb-4 pb-4">
                             <div className="col-12 mb-2 pb-2 section-title">

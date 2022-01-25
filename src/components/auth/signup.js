@@ -8,6 +8,7 @@ import Navbar from './../layout/navbar'
 import Navbar2 from './../layout/navbar2'
 import './login.css'
 import { Link, withRouter, useHistory } from 'react-router-dom';
+import Footer from '../layout/footer';
 
 
 
@@ -197,6 +198,7 @@ class SignUp extends Component {
                 </div>
               </div>
           </div>
+          <Footer/>
           </div>
           </React.Fragment>
     );

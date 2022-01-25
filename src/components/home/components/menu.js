@@ -105,7 +105,7 @@ const Menu = () => {
 
         return(
             <React.Fragment>
-                <section className="mf-latest-post">
+                <section className="mf-latest-post" style={{background: '#f2f2f2'}}>
                     <div className="kt-portlet container">
                         <div className="mf-latest-post-header">
                             <div className="mf-section-title text-left dark large-size ">

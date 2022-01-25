@@ -12,6 +12,7 @@ import { Spinner } from 'react-bootstrap';
 
 import './login.css'
 import { login } from '../../redux/apiCalls';
+import Footer from '../layout/footer';
 
 const LogIn = () =>{
   // constructor() {
@@ -187,7 +188,10 @@ const LogIn = () =>{
                   </div>
                 </div>
             </div>
+          
+          <Footer/>
           </div>
+
           </React.Fragment>
   
       );

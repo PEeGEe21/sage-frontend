@@ -31,19 +31,20 @@ const state={
 export default function Hero(){
     return(
         <React.Fragment>
-            <section className="slider">
+            <section className="hero-header slider testimonial">
 		
-				<div className="home_slider_container">
+				
 					
 				<OwlCarousel 
                         items={1} 
-                        className="owl-theme testimonial px-1 px-lg-5" 
+                        className="owl-theme" 
                         loop
                         nav 
-                        margin={10} 
-                        autoplay={false}
+                        margin={0} 
+                        autoplay={true}
                         smartSpeed= {800}
-                        autoplaySpeed= {200}
+                        autoplaySpeed= {1000}
+                        autoplayHoverPause={true}
                         navspeed= {1000}
                         paginationspeed= {1000}
                         slidespeed={1000}
@@ -51,7 +52,7 @@ export default function Hero(){
                         responsive={state.responsive}
                         >
 					{/* <div className="owl-carousel owl-theme home_slider owl-loaded owl-drag"> */}
-						
+                            <div className="slider home_slider_container" >
 
                                 <div className="container h-100">
 
@@ -77,7 +78,9 @@ export default function Hero(){
                                     </div>
 
                                 </div> 
+                            </div>
 
+                            <div className="slider home_slider_container">
                                 <div className="container">
                                     <div className="row  d-flex align-items-center justify-content-between">
                                         <div className="col-lg-6 col-md-5 col-sm-12 d-none d-lg-block">
@@ -97,15 +100,13 @@ export default function Hero(){
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>
-                                                <a href="" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
+                                                <a href="" className="hero-btn border-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div> 
-
-                                
-                                
-                           
+                            </div>
+        
 						
 						
 						
@@ -114,7 +115,6 @@ export default function Hero(){
 
 					<div className="home_slider_nav d-flex flex-column align-items-center justify-content-center">
 					</div>
-				</div>
 			</section>
         </React.Fragment>
     )

@@ -4,11 +4,16 @@
 }
 
 .home_slider_container{
-    padding: 2em 0 2em 0
+    padding: 7em 0 7em 0
 }
 
+.hero-header{
+    padding: 0 !important;
+}
 
-
+    .slider.testimonial .owl-carousel .owl-nav button.owl-prev, .slider.testimonial .owl-carousel .owl-nav button.owl-next, .slider.testimonial .owl-carousel button.owl-dot{
+        background: none;
+}
 
 .slider .owl-nav .owl-prev,
 .slider .owl-nav .owl-next{
@@ -18,7 +23,7 @@
 .slider .owl-nav .owl-prev:hover,
 .slider .owl-nav .owl-next:hover{
     transition: all .5s !important;
-    background: rgba(0,0,0,0.50);
+    background: rgba(0,0,0,0.50) !important;
 }
 
 .slider .owl-nav .owl-prev , 
@@ -200,6 +205,21 @@
     position: relative;
 }
 
+.hero-btn.border-btn{
+    background:none ;
+    border: 1px solid #e3c6c6;
+    color: #464d65;
+    transition: 0.5s;
+}
+
+.hero-btn.border-btn:hover{
+    background:#3d405b ;
+    border: none;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
 
 .hero-btn{
     /* display: inline-block; */
@@ -213,14 +233,17 @@
     width: 200px;
     transition: all 0.5s;
     cursor: pointer;
-    
-
+    position: relative;
+    letter-spacing: 1px;
     margin: 5px;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
+
 
 .hero-btn span{
     cursor: pointer;
@@ -255,6 +278,10 @@
 .hero-btn:hover i{
     opacity: 1;
     /* right: 0; */
+}
+
+.hero-btn:hover {
+    color: #fff;
 }
 
 

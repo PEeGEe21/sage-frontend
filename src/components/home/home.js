@@ -25,6 +25,7 @@ import '../layout/frontend.css'
 import '../layout/responsive.css'
 import Newsletter from './components/newsletter';
 import PopularProducts from './components/popularproducts';
+import SingleBanner from './components/singlebanner';
 
 
 class Home extends Component {
@@ -86,7 +87,8 @@ class Home extends Component {
                 <Banner />
                 <Category />
                 <Menu />
-                <Banner />
+                {/* <Banner /> */}
+                <SingleBanner />
 
                 <PopularProducts />
                 {/* <Newsletter /> */}

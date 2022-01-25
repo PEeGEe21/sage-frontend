@@ -63,7 +63,7 @@ const Navbar = () =>{
                 <div className="header-main clearfix container">
                     <div className="site-contact">
                         <div className="container">
-                            <div className="menu-row d-flex align-items-center justify-content-between">
+                            <div className="menu-row justify-content-between">
                                 <div className="site-logo col-md-9 col-sm-9 col-xs-9">
                                     <a href="/" className="logo">
                                         <img src="/assets/logo.svg" alt="Sage" className="logo"/>
@@ -131,8 +131,6 @@ const Navbar = () =>{
                                 <div className="navbar-toggle col-md-3 col-sm-3 col-xs-3">
                                   <span id="mf-navbar-toggle" className="navbar-icon">
                                     <i className="fa fa-bars"></i></span>
-                                      {/* <span className="navbars-line">
-                                    </span> */}
                                 </div>
                             </div>
                         </div>
