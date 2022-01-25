@@ -208,7 +208,7 @@ const Cart = () =>{
                                             </div>
                                             <div className="d-flex align-items-center justify-content-between">
                                             <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>
-                                            <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order with an SMS</button>
+                                            <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
                                             </div>
                                             
                                             <Form onSubmit={onSubmit}>

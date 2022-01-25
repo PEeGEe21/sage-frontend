@@ -12,6 +12,8 @@ const Hero = ({product}) => {
                         <nav className="breadcrumbs">
                             <a className="home" href="/"><span>Home</span></a>
                             <i className="fa fa-angle-right" aria-hidden="true"></i>
+                            <a className="" href={`/category/${product.category}`}><span>{product.category}</span></a>
+                            <i className="fa fa-angle-right" aria-hidden="true"></i>
                             <span>{product.name}</span>
                         </nav>
                     </div>

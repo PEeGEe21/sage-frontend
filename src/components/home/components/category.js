@@ -145,7 +145,7 @@ class Category extends Component {
                             {this.getCategoryRow()}
                         </div>
                         <div className="mf-button align-center style-1 margtop40">
-                            <Link className="button cat-btn has-background" to="/categories">View All Categories</Link>
+                            <Link className="button cat-btn no-marg has-background" to="/categories">View All Categories</Link>
                         </div>
                     </div>
                 </section>

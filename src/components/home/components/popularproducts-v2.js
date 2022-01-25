@@ -5,7 +5,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import { publicRequest } from '../../requestMethods'
 
-const PopularProducts = () => {
+const PopularProductsDemo = () => {
 
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);

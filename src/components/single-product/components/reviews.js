@@ -11,7 +11,6 @@ const Reviews = ({product}) => {
                                             <div className="" id="tab1default">
                                                 <h2>Description</h2>
                                                 <p>{product.description}</p>
-                                                <p>{product.category}</p>
                                             </div>
                                         </div>
                                     </Tab>

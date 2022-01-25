@@ -50,7 +50,7 @@ class PopularProducts extends Component {
   componentDidMount() {
     // setInterval(() => {
     axios
-      .get('http://127.0.0.1:8000/api/products/?is_popular=True')
+      .get('https://sage-server.herokuapp.com/api/products/?is_popular=True')
       .then((response) => {
         //   console.log(response.data)
         this.setState({
@@ -126,7 +126,7 @@ class PopularProducts extends Component {
                         </div>
                         <div className="col-lg-7">
                             <div className="row">
-                            {PopularProductsItems.sort(()=> Math.random() - Math.random())
+                            {this.state.productsData.sort(()=> Math.random() - Math.random())
                     .slice(0, 3).map((prod, i)=>(
                         <div className="col-lg-12 col-md-6 col-sm-12" key={prod.id}>
                             <div className="item p-3">

@@ -69,7 +69,7 @@ const RelatedProducts = ({product}) =>{
             <section className="related products">
                 <div className="container">
                     <div className="related-section-title">
-                        <h2 className="related-title mf-heading-primary">Related Products {product.category}</h2>
+                        <h2 className="related-title mf-heading-primary">Related Products</h2>
                     </div>
                     <ul className="products">
                     {/* {getProductRow()} */}

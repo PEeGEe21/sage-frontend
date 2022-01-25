@@ -78,7 +78,7 @@
   width: 300px !important;
 }
 
-.category .item:hover .kt-widget5__pic .cat-img-loop {
+.category .item .kt-widget5__pic:hover .cat-img-loop {
   transform: scale(1.2);
   transition: all 0.5s ease;
 }
@@ -171,4 +171,8 @@
 .pop_prod_btns .btn:focus{
   outline: none; 
   box-shadow: none
+}
+
+.cat-btn.no-marg{
+  margin-left: 0px !important;
 }

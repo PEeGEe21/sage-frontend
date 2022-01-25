@@ -124,7 +124,7 @@ class SideBar extends Component {
       
       axios
         .get(
-          'http://127.0.0.1:8000/api/category/',
+          'https://sage-server.herokuapp.com/api/category/',
         )
         .then(
           (response) => {
@@ -141,7 +141,7 @@ class SideBar extends Component {
     //   }, 1000);
 
     axios
-      .get('http://127.0.0.1:8000/api/products/?is_popular=True')
+      .get('https://sage-server.herokuapp.com/api/products/?is_popular=True')
       .then((response) => {
           console.log(response.data)
         this.setState({

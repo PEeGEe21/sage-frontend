@@ -20,6 +20,7 @@ const Menu = () => {
     //     getProducts()
     // }, [products])
 
+    // https://sage-server.herokuapp.com
     useEffect(()=>{
 
         const CancelToken = axios.CancelToken;
