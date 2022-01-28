@@ -6,7 +6,7 @@ export default function Hero({cat}) {
         <>
             <div className="page-header has-image">
                 <div className="page-header-content">
-                    <div className="featured-image" style={{backgroundImage: `url(${cat.image}) center top no-repeat`}}></div>
+                    <div className="featured-image" style={{backgroundImage: `url("${cat.image}") center top no-repeat`}}></div>
                     <div className="container">
                         <h1>{cat}</h1>
                         <nav className="breadcrumbs">

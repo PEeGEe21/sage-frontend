@@ -6,7 +6,7 @@ const Hero = ({category}) =>  {
         <>
             <div className="page-header has-image">
                 <div className="page-header-content">
-                    <div className="featured-image"></div>
+                    <div className="featured-image" style={{backgroundImage: 'url(/assets/img.png)'}}></div>
                     <div className="container">
                         <h1>Categories</h1>
                         <nav className="breadcrumbs">

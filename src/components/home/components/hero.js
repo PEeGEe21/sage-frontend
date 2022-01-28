@@ -31,7 +31,7 @@ const state={
 export default function Hero(){
     return(
         <React.Fragment>
-            <section className="hero-header slider testimonial">
+            <section className="hero-header slider testimonial ">
 		
 				
 					
@@ -52,7 +52,7 @@ export default function Hero(){
                         responsive={state.responsive}
                         >
 					{/* <div className="owl-carousel owl-theme home_slider owl-loaded owl-drag"> */}
-                            <div className="slider home_slider_container" >
+                            <div className="home_slider_container animated-img bg-img bg-overlay " style={{backgroundImage: "url(/assets/bg-34.jpg)"}}>
 
                                 <div className="container h-100">
 
@@ -80,7 +80,7 @@ export default function Hero(){
                                 </div> 
                             </div>
 
-                            <div className="slider home_slider_container">
+                            <div className="home_slider_container animated-img bg-img bg-overlay" style={{backgroundImage: "url(/assets/bg-20.jpg)"}}>
                                 <div className="container">
                                     <div className="row  d-flex align-items-center justify-content-between">
                                         <div className="col-lg-6 col-md-5 col-sm-12 d-none d-lg-block">

@@ -6,7 +6,7 @@ const Hero = ({product}) => {
         <>
             <div className="page-header has-image">
                 <div className="page-header-content">
-                    <div className="featured-image"></div>
+                    <div className="featured-image" style={{background: `url("${product.image}")` }}></div>
                     <div className="container">
                         <h1>{product.name}</h1>
                         <nav className="breadcrumbs">

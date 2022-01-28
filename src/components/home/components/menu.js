@@ -67,6 +67,10 @@ const Menu = () => {
                                 <img  className="mr-2 card-img-top img-fluid cat-img-loop img-sty" src="/assets/service1.jpg"  />
 
                                     )}
+
+                                <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
+                                    <i className="fas fa-cart-plus ml-1"></i>
+                                </a>
                                 {/* <img  className="mr-2 card-img-top img-fluid cat-img-loop" src={prod.image}  /> */}
                             </div>
                         </Link>
@@ -79,7 +83,7 @@ const Menu = () => {
                             <div className=" my-2">
                             {prod.deleted_price && 
 
-                                <span className="mr-3 d-inline-block" style={{marginRight:"10px"}}>
+                                <span className="mr-3" style={{marginRight:"10px"}}>
                                         <del> $<span>{prod.deleted_price}</span></del>
                                 </span>
 

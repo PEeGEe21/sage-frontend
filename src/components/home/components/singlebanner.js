@@ -20,7 +20,7 @@ export default class SingleBanner extends Component{
 
                             <div className="col-12 col-lg-12 col-sm-12 px-3 py-3 px-lg-3" >
                                 {/* <div className="container"> */}
-                                <div className="banner-img d-flex align-items-center justify-content-around" style={{background: 'url(/assets/products/product7.jpg)'}}>
+                                <div className="single-ban-img d-flex align-items-center justify-content-around" style={{backgroundImage: 'url(/assets/bg45.jpg)'}}>
 
                                     <div className="promo-text" style={{width: '40%'}}>
                                         <h2 className="text-white">Suyaaa</h2>

@@ -6,7 +6,7 @@ export default function Hero() {
         <>
             <div className="page-header has-image">
                 <div className="page-header-content">
-                    <div className="featured-image"></div>
+                    <div className="featured-image" style={{backgroundImage: 'url(/assets/img.png)'}}></div>
                     <div className="container">
                         <h1>Our Menu</h1>
                         <nav className="breadcrumbs">

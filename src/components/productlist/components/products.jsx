@@ -34,6 +34,11 @@ const Products = ({products, filteredProducts}) => {
                                 <img  className="mr-2 card-img-top img-fluid img-loop" src="/assets/service1.jpg"  />
 
                                     )}
+{/* <span className=""> */}
+    <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
+        <i className="fas fa-cart-plus ml-1"></i>
+    </a>
+{/* </span> */}
 
                                 {/* <img  className="mr-2 card-img-top img-fluid img-loop" src={prod.image}  /> */}
                             </div>
@@ -48,7 +53,7 @@ const Products = ({products, filteredProducts}) => {
                                 
                                     {
                                         prod.deleted_price && 
-                                        <span className="mr-3 d-inline-block" style={{marginRight:"10px"}}>
+                                        <span className="mr-3" style={{marginRight:"10px"}}>
 
                                             <del>$<span>{prod.deleted_price}</span></del>
                                         </span>

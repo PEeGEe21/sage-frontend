@@ -35,18 +35,17 @@ export default function Navbar2(){
 
             <div className="header-main">
                 <div className="container">
-                    <div className="row menu-row">
+                    <div className="menu-row justify-content-between">
                         <div className="site-logo col-md-9 col-sm-9 col-xs-9">
                             <a href="/" className="logo">
                                 <img src="assets/logo.svg" alt="Induscity" className="logo"/>
                             </a>
-                            <p className="site-title"><a href="#" rel="home">Induscity</a></p>
-                            <h2 className="site-description">Just another Steel Themes Sites site</h2>
+                            
                         </div>
                         <div className="site-menu hidden-md hidden-sm hidden-xs">
                             <nav id="site-navigation" className="main-nav primary-nav nav">
                                 <ul className="menu">
-                                <li className="nav_item"><a href="/">Shop</a></li>
+                                <li className="nav_item"><a href="/">Home</a></li>
                                 <li className="nav_item"><a href="/our-menu">Our Menu</a></li>
                                 <li className="nav_item"><a href="/categories">Categories</a></li>
                                     
@@ -61,7 +60,7 @@ export default function Navbar2(){
                             </nav>
                             {/* <SearchButton /> */}
 
-                            <div className="mf-header-item-button"><a href="#" className="mf-btn">Get a Quote</a></div>
+                            <div className="mf-header-item-button"><a href="#" className="mf-btn">ContactUs</a></div>
 
 
                         </div>

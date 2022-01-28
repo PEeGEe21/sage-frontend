@@ -2,6 +2,11 @@
     float: none !important;
 }
 
+
+.header-main{
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+}
+
 .header-sticky .site-header.scrolled{
        
 	-webkit-transition: .3s ease-out !important;
