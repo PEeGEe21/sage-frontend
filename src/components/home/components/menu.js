@@ -56,7 +56,7 @@ const Menu = () => {
 
 
         
-        return AllMenu.slice(0, 12).map((prod)=>{
+        return products.slice(0, 12).map((prod)=>{
             return(
                 <div className="col-lg-3 col-md-4 col-sm-12" key={prod.id}>
                     <div className="item p-3" >
