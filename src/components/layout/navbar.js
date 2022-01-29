@@ -12,6 +12,7 @@ import Announcement from '../home/components/announcement'
 import TopBar from './topbar';
 import {useSelector} from 'react-redux'
 import SearchButton from './searchbutton';
+import MobileNav from './sidebar';
 
 
 const Navbar = () =>{
@@ -131,20 +132,15 @@ const Navbar = () =>{
                                 </div>
                                 <div className=" col-md-3 col-sm-3 col-xs-3 navbar-toggle">
                                   <div className="d-flex align-items-center justify-content-center">
-                                    <Link to="/cart" className="shop-icon d-block  d-lg-none">
+                                    <Link to="/cart" className="shop-icon d-block  d-lg-none mr-3">
                                       <Badge badgeContent={quantity} color="primary">
                                                               
                                         <ShoppingCartOutlined/>
                                       </Badge>
                                     </Link>
                                     
-                                    <div className="navbar-toggle">
-                                      <span id="mf-navbar-toggle" className="navbar-icon">
-                                        {/* <i className="fa fa-bars"></i> */}
-                                        <span className="navbars-line"></span>
-                                      </span>
+                                    <MobileNav/>
 
-                                    </div>
                                   </div>
                               
                       

@@ -43,7 +43,6 @@ const TopBar = () => {
             </div>
           </div>  
         
-        <MobileNav/>
           
         </>
     )

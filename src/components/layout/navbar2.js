@@ -1,11 +1,16 @@
+import { ShoppingCartOutlined } from '@material-ui/icons'
 import React, { Component } from 'react'
+import {Badge} from "@material-ui/core"
+import { Link } from 'react-router-dom'
 import Announcement from '../home/components/announcement'
 import './navbar.css'
 import SearchButton from './searchbutton'
+import MobileNav from './sidebar'
 import './style.css'
 
 
 export default function Navbar2(){
+    const quantity = null
     return(
         <React.Fragment>
             <Announcement />
@@ -64,8 +69,18 @@ export default function Navbar2(){
 
 
                         </div>
-                        <div className="navbar-toggle col-md-3 col-sm-3 col-xs-3">
-                            <span id="mf-navbar-toggle" className="navbar-icon"><span className="navbars-line"></span></span>
+                        <div className=" col-md-3 col-sm-3 col-xs-3 navbar-toggle">
+                            <div className="d-flex align-items-center justify-content-center">
+                                <Link to="/cart" className="shop-icon d-block  d-lg-none mr-3">
+                                    <Badge badgeContent={quantity} color="primary">
+                                                            
+                                    <ShoppingCartOutlined/>
+                                    </Badge>
+                                </Link>
+                                
+                                <MobileNav/>
+
+                            </div>
                         </div>
                     </div>
                 </div>

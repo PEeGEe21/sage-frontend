@@ -21,7 +21,7 @@ const Reviews = ({product}) => {
                                         <div className="" id="tab3default">
                                             <h2 className="woocommerce-Reviews-title">Reviews</h2>
                                             <p>There are no reviews yet.</p>
-                                            <h3 id="reply-title" className="comment-reply-title mrgtop40">Be The First To Review “The Innovator</h3>
+                                            <h3 id="reply-title" className="comment-reply-title mrgtop40">Be The First To Review {product.name}</h3>
                                             <div id="reviews">
                                                 <div id="review_form_wrapper">
                                                     <div id="review_form">
@@ -55,7 +55,7 @@ const Reviews = ({product}) => {
                                                                     <input id="url" name="url" defaultValue="" placeholder="Website" size="30" type="text"/>
                                                                 </p>
                                                                 <p className="comment-form-phone">
-                                                                    <input id="phone" name="phone" placeholder="Phone Num" size="30" type="text" defaultValue=""/>
+                                                                    <input id="phone" name="phone" placeholder="Phone Num" size="30" type="tel" defaultValue=""/>
                                                                 </p>
                                                                 <div className="clearfix"></div>
                                                                 <p className="form-submit">

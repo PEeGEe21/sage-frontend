@@ -7,7 +7,7 @@ export default class SingleBanner extends Component{
         return(
             <React.Fragment>
                 <section>
-                    <div className="container single-banner">
+                    <div className="container-fluid single-banner">
 
                    
                         <div className="row ">
