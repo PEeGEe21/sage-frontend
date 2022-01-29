@@ -10330,6 +10330,10 @@ Page Header
   right: 0;
   bottom: 0;
   z-index: -1;
+  /* background-position: top center !important; */
+    /* background-repeat: no-repeat !important; */
+    /* background-size: cover !important; */
+
   /* background: url(../images/bg/page-header.jpg) center top no-repeat; */
 }
 

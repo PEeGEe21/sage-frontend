@@ -8,6 +8,8 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import {axios} from 'axios'
 import './style.css'
+import { publicRequest } from '../requestMethods'
+
 
 const FilterContainer = styled.div`
     display: flex;
@@ -35,8 +37,10 @@ const Option = styled.option``;
 const Categories = () => {
     const location = useLocation();
     const cat = (location.pathname.split("/")[2]);
+    const [category, setCategory] = useState({});
+
     const [filters, setFilters] = useState({});
-    const [sort, setSort] = useState("Latest")
+    const [sort, setSort] = useState("Latest");
 
     const handleFilters = (e) =>{
         const value = e.target.value;
@@ -46,7 +50,22 @@ const Categories = () => {
         });
     }
 
-    
+
+
+
+
+    // useEffect(() => {
+    //     const getProduct = async() => {
+    //         try{
+    //             const res = await publicRequest.get("/category/" + cat)
+    //             setCategory(res.data);
+    //             console.log(category);
+    //         }catch{
+
+    //         }
+    //     }
+    //     getProduct()
+    // }, [cat])
 
    
     return (
