@@ -2,6 +2,11 @@
     position: relative;
     overflow: hidden;
 }
+
+.mf-latest-post .item .kt-widget5__pic .menu-img-sty{
+    width: 100% !important;
+    height: 200px;
+}
 .mf-latest-post .item .kt-widget5__pic{
     object-fit: cover;
 }
@@ -28,3 +33,4 @@
     color: #fff;
     background: #121d2f;
 }
+

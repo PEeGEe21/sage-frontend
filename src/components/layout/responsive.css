@@ -83,7 +83,7 @@
         display: none;
     }
     .navbar-toggle,
-    .navbar-icon {
+    .navbar-icon, .shop-icon {
         display: block !important  ;
     }
     .header-transparent .navbar-icon .navbars-line,

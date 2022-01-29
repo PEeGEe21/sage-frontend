@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './menu.css'
+import {AllMenu} from './../../data'
+
 
 
 const Menu = () => {
@@ -54,26 +56,28 @@ const Menu = () => {
 
 
         
-        return products.slice(0, 12).map((prod)=>{
+        return AllMenu.slice(0, 12).map((prod)=>{
             return(
                 <div className="col-lg-3 col-md-4 col-sm-12" key={prod.id}>
                     <div className="item p-3" >
-                        <Link  to={`/our-menu/product/${prod.id}`}>
+                       
 
                             <div className="kt-widget5__pic text-center">
-                            {prod.image ? 
-                                <img  className="mr-2 card-img-top img-fluid cat-img-loop img-sty" src={prod.image} alt={prod.name} />
-                                                                : (
-                                <img  className="mr-2 card-img-top img-fluid cat-img-loop img-sty" src="/assets/service1.jpg"  />
+                            <Link  to={`/our-menu/product/${prod.id}`}>
+                                {prod.image ? 
+                                    <img  className="mr-2 card-img-top img-fluid cat-img-loop menu-img-sty img-sty" src={prod.image} alt={prod.name} />
+                                    : (
+                                    <img  className="mr-2 card-img-top img-fluid cat-img-loop menu-img-sty img-sty" src="/assets/service1.jpg"  />
 
-                                    )}
+                                )}
+                                </Link>
 
                                 <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
                                     <i className="fas fa-cart-plus ml-1"></i>
                                 </a>
                                 {/* <img  className="mr-2 card-img-top img-fluid cat-img-loop" src={prod.image}  /> */}
                             </div>
-                        </Link>
+                        
                         <div className="my-3 text-left">
                             <h4>
                             <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>

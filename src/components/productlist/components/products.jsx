@@ -25,24 +25,24 @@ const Products = ({products, filteredProducts}) => {
             return(
                 <div className="col-lg-3 col-md-6 col-sm-12 our-menu" key={prod.id}>
                     <div className="item p-3" >
-                        <Link to={`/our-menu/product/${prod.id}`}>
                             <div className="card h-100 text-center" >
+                            <Link to={`/our-menu/product/${prod.id}`}>
 
-                            {prod.image ? 
-                                <img  className="mr-2 card-img-top img-fluid img-loop" src={prod.image} alt={prod.name} />
-                                                                : (
-                                <img  className="mr-2 card-img-top img-fluid img-loop" src="/assets/service1.jpg"  />
+                                {prod.image ? 
+                                    <img  className="mr-2 card-img-top img-fluid img-loop" src={prod.image} alt={prod.name} />
+                                                                    : (
+                                    <img  className="mr-2 card-img-top img-fluid img-loop" src="/assets/service1.jpg"  />
 
-                                    )}
-{/* <span className=""> */}
-    <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
-        <i className="fas fa-cart-plus ml-1"></i>
-    </a>
-{/* </span> */}
+                                )}
+                            </Link>
+                                {/* <span className=""> */}
+                                    <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
+                                        <i className="fas fa-cart-plus ml-1"></i>
+                                    </a>
+                                {/* </span> */}
 
                                 {/* <img  className="mr-2 card-img-top img-fluid img-loop" src={prod.image}  /> */}
                             </div>
-                        </Link>
                         <div className="my-3 text-left">
                             <h4>
                             <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>

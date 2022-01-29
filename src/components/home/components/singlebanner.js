@@ -22,7 +22,7 @@ export default class SingleBanner extends Component{
                                 {/* <div className="container"> */}
                                 <div className="single-ban-img d-flex align-items-center justify-content-around" style={{backgroundImage: 'url(/assets/bg45.jpg)'}}>
 
-                                    <div className="promo-text" style={{width: '40%'}}>
+                                    <div className="promo-text">
                                         <h2 className="text-white">Suyaaa</h2>
                                         <p className="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat autem asperiores saepe esse dolorem odio obcaecati cupiditate</p>
                                         <a href="" className="promo-link">visit shop <ArrowForwardIosSharp className="promo-icon"/>

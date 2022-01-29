@@ -128,9 +128,26 @@ const Navbar = () =>{
                                         </div>
                                     </div>
                                 </div>
-                                <div className="navbar-toggle col-md-3 col-sm-3 col-xs-3">
-                                  <span id="mf-navbar-toggle" className="navbar-icon">
-                                    <i className="fa fa-bars"></i></span>
+                                <div className=" col-md-3 col-sm-3 col-xs-3">
+                                  <div className="d-flex align-items-center justify-content-center">
+                                    <Link to="/cart" className="shop-icon d-block  d-lg-none">
+                                      <Badge badgeContent={quantity} color="primary">
+                                                              
+                                        <ShoppingCartOutlined/>
+                                      </Badge>
+                                    </Link>
+                                    
+                                    <div className="navbar-toggle">
+                                      <span id="mf-navbar-toggle" className="navbar-icon">
+                                        {/* <i className="fa fa-bars"></i> */}
+                                        <span className="navbars-line"></span>
+                                      </span>
+
+                                    </div>
+                                  </div>
+                              
+                      
+                                    
                                 </div>
                             </div>
                         </div>

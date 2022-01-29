@@ -57,7 +57,7 @@ export default function Hero(){
                                 <div className="container h-100">
 
                                     <div className="row  d-flex align-items-center justify-content-between">
-                                        <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap">
+                                        <div className="col-lg-6 col-md-7 col-sm-12 flex-wrap pl-2">
                                             <div className="subtext">lorem Ipsum Dolor</div>
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
@@ -95,7 +95,7 @@ export default function Hero(){
                                                 {/* <img src="/assets/icon-startup.svg" className="img-fluid" style={{height: '470px'}}/> */}
                                             </div> 
                                         </div>
-                                        <div className="col-lg-6 col-md-7 col-sm-12 ">
+                                        <div className="col-lg-6 col-md-7 col-sm-12 pl-2">
                                             <div className="subtext">lorem Ipsum Dolor</div>
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
