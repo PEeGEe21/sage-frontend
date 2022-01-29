@@ -330,7 +330,7 @@ const Cart = () =>{
                         : 
                             <div className="row d-flex align-items-center text-center justify-content-center">
                                 <div className="col-12">
-                                    <h2><span>Log in to view cart</span></h2>
+                                    <h2><span><a href="/login">Log in</a> to view cart</span></h2>
                                 </div>
                             </div>
                         

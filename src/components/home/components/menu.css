@@ -19,7 +19,7 @@
     transition: all 0.5s ease;
 } */
 
-.mf-latest-post .item:hover .kt-widget5__pic .cat-img-loop {
+.mf-latest-post .item .kt-widget5__pic:hover .cat-img-loop {
     transform: scale(1.2);
     transition: all 0.5s ease;
 }

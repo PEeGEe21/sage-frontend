@@ -120,7 +120,7 @@ const Menu = () => {
                             <div className="mf-section-title text-left dark large-size ">
                                 <h2>Our Menu</h2>
                             </div>
-                            <Link to="/our-menu" className="mf-btn-2 view-more d-none d-lg-block">View More</Link>
+                            <a href="/our-menu" className="mf-btn-2 view-more d-none d-lg-block">View More</a>
                         </div>
                         <div className="row">
                                 {getProductRow()}

@@ -126,9 +126,10 @@ const Navbar = () =>{
                                             </div>
                                             
                                         </div>
+                                        
                                     </div>
                                 </div>
-                                <div className=" col-md-3 col-sm-3 col-xs-3">
+                                <div className=" col-md-3 col-sm-3 col-xs-3 navbar-toggle">
                                   <div className="d-flex align-items-center justify-content-center">
                                     <Link to="/cart" className="shop-icon d-block  d-lg-none">
                                       <Badge badgeContent={quantity} color="primary">

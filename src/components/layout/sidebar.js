@@ -7,6 +7,7 @@ import {ShoppingCartOutlined } from '@material-ui/icons';
 
 function MobileNav() {
     const quantity = null
+    const user = null
 
     return (
         <>
@@ -20,13 +21,22 @@ function MobileNav() {
                     <li><a href="/" className="">Blog</a></li>
                     <li><a href="/" className="">Contact Us</a></li>
                     <li>
+                        {user ? <span><h5>user is logged in</h5></span> 
+                        : <span>
+                            <h5><a href="/login">Login</a> / <a href="/signup">Sign Up</a>
+                            </h5> 
+                        </span>
+                                                
+                        }
+                    </li>
+                    {/* <li>
                     <Link to="/cart">
                         <Badge badgeContent={quantity} color="primary">
                                                   
                             <ShoppingCartOutlined/>
                         </Badge>
                         </Link>
-                    </li>
+                    </li> */}
                     <li className="extra-menu-item last-child">
                         <form className="sidebar-search-form">
                             <input className="search-field" placeholder="Search..." defaultValue="" name="s" type="search"/>
