@@ -76,7 +76,8 @@ class Recommended extends Component {
 
   componentDidMount() {
     axios
-      .get('http://127.0.0.1:8000/api/products/?is_recommended=True')
+      // .get('http://127.0.0.1:8000/api/products/?is_recommended=True')
+      .get('https://sage-server.herokuapp.com/api/products/?is_recommended=True')
       .then((response) => {
           // console.log(response.data)
         this.setState({
