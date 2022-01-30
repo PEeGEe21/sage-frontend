@@ -21,7 +21,7 @@ const Products = ({products, filteredProducts}) => {
 
 
     const getProductRow = () =>{
-        return filteredProducts.map((prod)=>{
+        return products.map((prod)=>{
             return(
                 <div className="col-lg-3 col-md-6 col-sm-12 our-menu" key={prod.id}>
                     <div className="item p-3" >
