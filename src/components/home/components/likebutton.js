@@ -16,7 +16,7 @@ const LikeButton = () => {
             onAnimationEnd={() => setClicked(false)}
             className={cn("like-button-wrapper btn btn-outline-dark mr-3", {liked, clicked})}>
 
-            {liked && (
+            {/* {liked && (
                 <div className="particles">
                     {particleList.map((_, index) => (
                         <div className="particle-rotate" style={{transform: `rotate(${(360 / particleList.length) * index + 1}deg)`,}}>
@@ -27,7 +27,7 @@ const LikeButton = () => {
                         </div>
                     ))}
                 </div>
-            )}
+            )} */}
             <div className="like-button">
                 <i className="fas fa-heart"></i>
                 {/* <span>Like</span> */}

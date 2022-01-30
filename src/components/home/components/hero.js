@@ -41,7 +41,7 @@ export default function Hero(){
                         loop
                         nav 
                         margin={0} 
-                        autoplay={true}
+                        autoplay={false}
                         smartSpeed= {800}
                         autoplaySpeed= {1000}
                         autoplayHoverPause={true}

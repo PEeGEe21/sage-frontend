@@ -140,8 +140,8 @@ const Cart = () =>{
 
     }
 
-    const user = useSelector((state) => state.user.currentUser);
-    // const user = null;
+    // const user = useSelector((state) => state.user.currentUser);
+    const user = "praise";
 
 
 

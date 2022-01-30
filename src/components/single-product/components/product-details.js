@@ -83,8 +83,9 @@ const ProductDetails = ({product})=>{
                         <img src={product.image} alt="" className="main"/>
                         <img src={product.featured_image1} alt="" className="t-one"/>
                         <img src={product.featured_image2} alt="" className="t-two"/>
+                        <img src={product.featured_image3} alt="" className="t-three"/>
                         {/* {user ? <span>user logged in</span>:  <span> user not logged in</span>} */}
-                        {product.featured_image3 && <img src={product.featured_image3} alt="" className="t-three"/>}
+                        {/* {product.featured_image3 && <img src={product.featured_image3} alt="" className="t-three"/>} */}
                         {/* <img src={product.featured_image2} alt="" className="t-three"/> */}
                     
                     </div>
