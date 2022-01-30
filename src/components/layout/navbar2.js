@@ -38,7 +38,7 @@ export default function Navbar2(){
             </div>
         </div>
 
-            <div className="header-main">
+            <div className="header2 header-main">
                 <div className="container">
                     <div className="menu-row justify-content-between">
                         <div className="site-logo col-md-9 col-sm-9 col-xs-9">
