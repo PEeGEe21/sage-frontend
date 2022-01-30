@@ -23,7 +23,7 @@ const SingleProduct = () => {
     const id = (location.pathname.split("/")[3]);
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(10);
-
+    const [cat, setCat] = useState()
 
 
 
@@ -31,7 +31,11 @@ const SingleProduct = () => {
         const getProduct = async() => {
             try{
                 const res = await publicRequest.get("/products/" + id)
+                
                 setProduct(res.data);
+                setCat(res.data.category)
+                console.log(cat, "cattt");
+                
             }catch{
 
             }
@@ -55,7 +59,7 @@ const SingleProduct = () => {
 
                                         <Reviews product={product} props={product}></Reviews>
 
-                                        <RelatedProducts product={product}></RelatedProducts>
+                                        <RelatedProducts product={product} cat={cat}></RelatedProducts>
                                         
                                     </div>
                                 </div>

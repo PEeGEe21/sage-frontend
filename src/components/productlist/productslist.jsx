@@ -54,6 +54,8 @@ const ProductsList = () => {
         const getProducts = async ()=>{
             try{
                 const res = await axios.get( "https://sage-server.herokuapp.com/api/products/" );
+                    // const res = await axios.get( "http://localhost:8000/api/products/" );
+
                 setProducts(res.data)
                 // console.log(res)
             }catch(err){}
@@ -63,7 +65,7 @@ const ProductsList = () => {
 
 
     useEffect(() => {
-        setFilteredProducts(
+        products && setFilteredProducts(
             products.filter(item=> Object.entries(filters).every(([key, value])=>
                 item[key].include(value)
             ))
@@ -75,7 +77,7 @@ const ProductsList = () => {
             setFilteredProducts((prev)=>
                 [...prev].sort((a, b)=> a.date_added - b.date_added)
                 );
-                console.log(setFilteredProducts)
+                // console.log(setFilteredProducts)
         } else if ((sort === "asc")){
             setFilteredProducts((prev)=>
             [...prev].sort((a, b) => a.price - b.price)
@@ -95,7 +97,7 @@ const ProductsList = () => {
                     <Navbar />
                     <Hero />
                     
-                            <FilterContainer>
+                            {/* <FilterContainer>
                             
                                 <Filter>
                                     <FilterText>
@@ -107,7 +109,7 @@ const ProductsList = () => {
                                         <Option value="desc">Price (desc)</Option>
                                     </Select>
                                 </Filter>
-                            </FilterContainer>
+                            </FilterContainer> */}
 
                     <Products products={products} filteredProducts={filteredProducts}/>
                     <ContentArea />

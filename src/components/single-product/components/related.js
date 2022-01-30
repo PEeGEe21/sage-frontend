@@ -1,7 +1,7 @@
 import React, {Component, useState, useEffect} from 'react'
 import axios from 'axios';
 
-const RelatedProducts = ({product}) =>{
+const RelatedProducts = ({product, cat}) =>{
     // const [category, setCategory] = useState()
     const [products, setProducts] = useState({})
 
@@ -15,16 +15,20 @@ const RelatedProducts = ({product}) =>{
 
 //  const category = product.category
     useEffect(()=>{
-       
+        
+
         const getProducts = async ()=>{
             try{
-                const res = await axios.get( `http://127.0.0.1:8000/api/products/?category=${product.category}`);
+
+                const res = await axios.get( `http://127.0.0.1:8000/api/products/?category=${cat}`);
+// const res = await axios.get( cat ? `https://sage-server.herokuapp.com/api/products/?category=${cat}` : "https://sage-server.herokuapp.com/api/products/" );
+
                 setProducts(res.data)
-                console.log(products)
+                console.log(products, "productss")
             }catch(err){}
         };
         getProducts()
-    }, [product.category])
+    }, [cat])
         
     
     const getProductRow = () =>{
@@ -32,15 +36,15 @@ const RelatedProducts = ({product}) =>{
     
             return(
                 <li className="product col-sm-12 col-xs-12 col-md-4">
-                                    <div className="product-inner">
-                                        <a href="#" className="woocommerce-loop-product__link"><img width="270" height="270" src="/assets/products/product6.jpg" alt=""/></a>
-                                        <div className="product-info">
-                                            <h4><a href="#">Built to Last</a></h4>
-                                            <span className="price">$19.99</span>
-                                            <div className="product-footer"><a href="#" className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
-                                        </div>
-                                    </div>
-                                </li>
+                    <div className="product-inner">
+                        <a href="#" className="woocommerce-loop-product__link"><img width="270" height="270" src="/assets/products/product6.jpg" alt=""/></a>
+                        <div className="product-info">
+                            <h4><a href="#">{prod.name}</a></h4>
+                            <span className="price">$19.99</span>
+                            <div className="product-footer"><a href="#" className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
+                        </div>
+                    </div>
+                </li>
             )
         })
     }
