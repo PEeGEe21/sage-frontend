@@ -49,8 +49,8 @@ const Navbar = () =>{
       </ul>
     );
 
-    // const quantity = useSelector(state=>state.cart.quantity)
-    const quantity = null
+    const quantity = useSelector(state=>state.cart.quantity)
+    // const quantity = null
     // const user = useSelector((state) => state.user.currentUser);
     const user = null;
     // console.log(user)

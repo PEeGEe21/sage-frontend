@@ -1,12 +1,14 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Navbar from '../layout/navbar'
 import Hero from './components/hero'
 import Footer from '../layout/footer'
 import ContentArea from '../home/components/cta'
 import {CartItems} from '../data'
-import {useSelector} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {useSelector, useDispatch} from 'react-redux'
+import { addProduct, clearCart, removeProduct } from '../../redux/cartRedux';
 
+import {Link, useHistory} from 'react-router-dom'
+import axios  from 'axios'
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -19,29 +21,48 @@ import { useTheme } from '@material-ui/styles'
 import './cart.css'
 import { Box, FormControl, InputLabel, MenuItem, OutlinedInput, Select } from '@material-ui/core'
 import SelectInput from '@material-ui/core/Select/SelectInput'
+import StripeCheckout from 'react-stripe-checkout';
+import Swal from 'sweetalert2';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 
-
+const KEY = 'pk_test_51KS9QcHOYXT3XuO9qWpL49f82YFfnM1heqVUS6iLbF0C0zWTzLOPYmxa6xI4WgjvYT5NAnc9anzRyLyDlxHSICpX00m39OyO40'
+// const KEY = process.env.REACT_APP_STRIPE
 
 const Cart = () =>{
+
+    const history = useHistory()
+    const dispatch = useDispatch();
+
+    const [stripeToken, setStripeToken] = useState(null)
+    const onToken = (token) => {
+        setStripeToken(token);
+    }
+
+    
+
+
     const cart = useSelector(state=>state.cart)
-    // console.log(cart)
+
+    console.log(cart)
+    
     const [address, setAddress] = useState('');
 
     const [open, setOpen] = useState(false);
     const theme = useTheme();
     const [states, setStates] = useState('')
+    const [billAddress, setBillAddress] = useState('')
     const [meals, setMeals] = useState()
     // cart.products
     const handleChange = (event) => {
         setStates(event.target.value);
     }
 
-
     const onChange = (event) =>{
         setAddress(event.target.value);
     }
+
     // const onChange = (e) =>{
     //     const value = e.target.value;
     //     setAddress({
@@ -63,8 +84,9 @@ const Cart = () =>{
                     </Link>
                     </td>
     
-                    <td>
-                        <input name="quantity" min="0" defaultValue={prod.quantity} type="number"/>
+                    <td >
+                        {/* <input name="quantity" min="0" defaultValue= type="number"/> */}
+                        <p className="d-flex align-items-center justify-content-center">{prod.quantity}</p>
                     </td>
     
                     <td>
@@ -120,13 +142,33 @@ const Cart = () =>{
     }
 
   
-    const smsOrder = () => {
-        setOpen(true);
+    const smsOrder = (event) => {
+        // setOpen(true);
+        toast.success('Your order was successful', {
+            duration: 4000,
+            position: 'bottom-center',
+            // Styling
+            style: {},
+            className: '',
+            // Custom Icon
+            icon: '👏',
+            // Change colors of success/error/loading icon
+            iconTheme: {
+              primary: '#000',
+              secondary: '#fff',
+            },
+            // Aria
+            ariaProps: {
+              role: 'status',
+              'aria-live': 'polite',
+            },
+          });
     };
     
     const handleClose = () => {
         setOpen(false);
     };
+    
 
 
 
@@ -140,11 +182,67 @@ const Cart = () =>{
 
     }
 
+    const clearCartItems =() =>{
+        dispatch(clearCart())
+    }
+
+    const quantity = useSelector(state=>state.cart.quantity)
+
+    // const RemoveCartItem =() =>{
+    //     dispatch(removeProduct({...product, quantity}))
+    // }
+
     // const user = useSelector((state) => state.user.currentUser);
     const user = "praise";
 
+    useEffect(()=> {
+        const makeRequest = async () => {
+            try{
+                const res = await axios.post(
+                    "http://localhost:8000/api/payment/", {
+                        tokenId: stripeToken.id,
+                        amount: cart.total,
+                        description : `Total payment is $${cart.total}`,
+                        // billingAddress: billAddress
+                    }
+                );
+                console.log(res.data);
+                toast.success('Your order was successful', {
+                    duration: 4000,
+                    position: 'top-center',
+                    // Styling
+                    style: {},
+                    className: '',
+                    // Custom Icon
+                    icon: '👏',
+                    // Change colors of success/error/loading icon
+                    iconTheme: {
+                      primary: '#000',
+                      secondary: '#fff',
+                    },
+                    // Aria
+                    ariaProps: {
+                      role: 'status',
+                      'aria-live': 'polite',
+                    },
+                  });
+                // history.push("/success", {data: res.data});
+                // setTimeout(() => {
+                //     Swal.fire({
+                //         icon: 'success',
+                //         title: 'Weldone!',
+                //         text: 'You have succesfully placed an order!',
+                //         footer: '<a href="/our-menu">Continue ordering?</a>'
+                //     });
+                //   }, 1000);
+            } catch(err){
+                console.log(err)
+            }
+        };
+        stripeToken && cart.total >= 1 && makeRequest()
+    }, [stripeToken, cart.total]);
 
-
+    // cart.total >= 1 && 
     return (
         <>
             <div className="home   header-sticky  header-v5 hide-topbar-mobile">
@@ -161,26 +259,43 @@ const Cart = () =>{
                                                 <table className="table table-1">
                                                     <tbody>
                                                         <tr>
-                                                            <th><span>Product</span></th>
+                                                            <th><span>Meal</span></th>
                                                             <th><span>Quantity (Plates)</span></th>
-                                                            <th><span>Product Price</span></th>
+                                                            <th><span>Meal Price</span></th>
                                                             <th><span>Total</span></th>
                                                             <th><span>Remove</span></th>
                                                         </tr>
 
-                                                        {getcartproduct()}
+                                                        {/* {getcartproduct()} */}
+                                                        {quantity == null ? (
+                                                        <tr>
+                                                            <td>
+                                                                <span className="h1 py-3"> Cart is empty, <a href="/our-menu" className="text-underline empty_cart_link">go back to our menu</a></span>
+                                                            </td>
+                                                        </tr>
+                                                        ) : getcartproduct()}
 
                                                         </tbody>
                                                 </table>
                                             </div>
                                         </div>
-                                        <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        {/* <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <input placeholder="Enter Coupon Code..." className="coupon" type="text"/>
-                                            <button className="cart_btn1 tran3s color1_bg">Apply Coupon</button>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 cart_update text-right">
-                                            <button className="cart_btn3 tran3s">Update Cart</button>
-                                        </div>
+                                            <button className="cart_btn1 mf-btn-2 tran3s color1_bg">Apply Coupon</button>
+                                        </div> */}
+                                        {quantity !== null && (
+                                            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 cart_update text-right">
+
+
+                                                <button className="mf-btn-2 tran3s" onClick={clearCartItems}>Clear Cart</button>
+                                                
+                                            </div>
+                                            
+                                            )
+                                        }
+
+
+                                        
                                     </div>
 
                                     <div className="row shipping_address align-items-center justify-content-center">
@@ -206,10 +321,30 @@ const Cart = () =>{
                                                     </tbody>
                                                 </table>
                                             </div>
+
                                             <div className="d-flex align-items-center justify-content-between">
-                                            <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>
-                                            <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+                                                {/* {stripeToken ? (<span>Processing. Please wait....</span>) : ( 
+                                                    onClick={()=> setBillAddress(billingAddress)}
+                                                    */}
+                                                <StripeCheckout 
+                                                    name= "Sage Restaurant" 
+                                                    image= "/assets/logo.svg"
+                                                    billingAddress 
+                                                    shippingAddress
+                                                    description = {`Your total is $${cart.total}`} 
+                                                    amount={cart.total*100} 
+                                                    token={onToken} 
+                                                    stripeKey={KEY}
+                                                    
+                                                    >
+                                                        <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>
+                                                </StripeCheckout>    
+                                                {/* )} */}
+                                        
+                                            {/* <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button> */}
                                             </div>
+
+                                            <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
                                             
                                             <Form onSubmit={onSubmit}>
 

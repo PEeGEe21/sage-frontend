@@ -2,7 +2,7 @@ import { Add, Remove } from '@material-ui/icons'
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { useState, useEffect} from 'react';
-import { addProduct } from '../../../redux/cartRedux';
+import { addProduct, clearCart } from '../../../redux/cartRedux';
 import {useDispatch} from 'react-redux'
 import cn from 'classnames'
 
@@ -74,7 +74,7 @@ const ProductDetails = ({product})=>{
         setClicked(true)
         console.log(addProduct)
     }
-
+    
     return(
         <React.Fragment>
             <div className="mf-product-details clearfix">
@@ -115,6 +115,8 @@ const ProductDetails = ({product})=>{
                         </AmountContainer>
 
                         <Button onClick={handleClick} onAnimationEnd={() => setClicked(false)} className={cn("add_to_cart", {clicked})}>Add to cart</Button>
+
+                        {/* <Button onClick={clearCartItems} >Clear Cart</Button> */}
                     </AddContainer>
             
                 

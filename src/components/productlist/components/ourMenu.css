@@ -12,7 +12,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background: rgba(0,0,0,0.10);
+    background: rgba(0,0,0,1);
     color: #fff;
     z-index: 999;
     padding: 10px 10px 5px 10px;
@@ -21,7 +21,7 @@
 
 .menu-cart-icon:hover{
     color: #fff;
-    background: rgba(0,0,0,0.30);
+    background: rgba(0,0,0,0.70);
 
 
 }

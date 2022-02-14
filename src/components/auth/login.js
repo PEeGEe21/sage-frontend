@@ -35,8 +35,11 @@ const LogIn = () =>{
 
   const onSubmit = (e) => {
     e.preventDefault();
-
+    localStorage.setItem('username', JSON.stringify(login(dispatch, {username, password})));
+    // localStorage.setItem('username', JSON.stringify(username));
     login(dispatch, {username, password})
+    
+
 
     // const { email, password, username, errors } = this.state;
 
@@ -168,7 +171,7 @@ const LogIn = () =>{
                             )} */}
                             </button>
 
-                            { error && <p style={{color: 'red'}}>Something went wrong</p> }
+                            {/* { error && <p style={{color: 'red'}}>Something went wrong</p> } */}
                             <p className="text-left p-signin_form">
                               Don't have an account?{' '} <Link to="/signup">Sign Up</Link>
   

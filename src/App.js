@@ -38,6 +38,7 @@ import Categories from './components/single-category/categories';
 import ErrorPage from './components/error-page/error_page';
 
 import { useSelector } from 'react-redux';
+import Success from './components/success';
 
 
 
@@ -79,6 +80,7 @@ const App = () => {
                 <Route path="/category/:categories" component={Categories}/>
 
                 <Route exact path="/our-menu" component={ProductsList} />
+                <Route exact path="/success" component={Success} />
                 <Route path="*" component={ErrorPage} />,
 
               </Switch>

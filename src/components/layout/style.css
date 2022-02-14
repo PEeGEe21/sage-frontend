@@ -2609,7 +2609,7 @@ Page Conents
 
 .mf-btn-2 {
   font-weight: 500;
-  color: #252525;
+  color: #fff;
   text-align: center;
   display: inline-block;
   min-width: 170px;
@@ -2618,7 +2618,7 @@ Page Conents
   -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 0 20px;
-  background-color: #fff;
+  background-color: #252525;
   text-transform: capitalize;
   border: 1px solid #efefef;
   -webkit-box-shadow: none;
@@ -10682,9 +10682,10 @@ cart Table
   color: #fff;
   line-height: 50px;
   display: inline-block;
-  background: #f7c02d;
+  background: #121d2f !important;
   border: 0;
   border-radius: 3px;
+  
 }
 
 .cart .shop_cart_table button:hover {

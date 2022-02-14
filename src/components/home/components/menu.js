@@ -22,7 +22,7 @@ const Menu = () => {
     //     getProducts()
     // }, [products])
 
-    // https://sage-server.herokuapp.com
+    // https://sage-server.herokuapp.com/api/products/
     useEffect(()=>{
 
         const CancelToken = axios.CancelToken;
@@ -120,7 +120,7 @@ const Menu = () => {
                             <div className="mf-section-title text-left dark large-size ">
                                 <h2>Our Menu</h2>
                             </div>
-                            <a href="/our-menu" className="mf-btn-2 view-more d-none d-lg-block">View More</a>
+                            <a href="/our-menu" className="mf-btn-2 cat-btn d-none d-lg-block">View More</a>
                         </div>
                         <div className="row">
                                 {getProductRow()}

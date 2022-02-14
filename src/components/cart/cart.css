@@ -2,3 +2,22 @@
     width: 70px;
     height: 70px;
 }
+
+.cart .shop_cart_table button.cart_custom-btn2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #121d2f;
+    line-height: 50px;
+    display: inline-block;
+    background: none !important;
+    border: 1px solid #121d2f;
+    border-radius: 3px;
+}
+
+.cart .shop_cart_table .table-1 tr td {
+    padding-top: 61px;
+}
+.cart .shop_cart_table .table-1 tr td .empty_cart_link{
+    text-decoration: underline !important;
+}

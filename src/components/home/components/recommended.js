@@ -198,7 +198,7 @@ class Recommended extends Component {
                                           
                                           
                                           </button> */}
-                                          <LikeButton/>
+                                          {/* <LikeButton/> */}
 
                                         
                                         <Link className="btn btn-outline-dark order " to={`/our-menu/product/${prod.id}`}>

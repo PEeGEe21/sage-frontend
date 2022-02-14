@@ -34,7 +34,7 @@ class Footer extends Component{
                                             </div>                                            
                                             <span><a href="/">Sage Restaurant</a></span>
                                             <p>221B Baker Street, Post office Box 353 </p>
-                                            <p>Park Road, USA - 215431</p>
+                                            <p>Park Road, Nigeria - 215431</p>
                                         </div>
                                 </div>
                             </div>
