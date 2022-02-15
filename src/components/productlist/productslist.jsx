@@ -53,8 +53,8 @@ const ProductsList = () => {
     useEffect(()=>{
         const getProducts = async ()=>{
             try{
-                // const res = await axios.get( "https://sage-server.herokuapp.com/api/products/" );
-                    const res = await axios.get( "http://localhost:8000/api/products/" );
+                const res = await axios.get( "https://sage-server.herokuapp.com/api/products/" );
+                    // const res = await axios.get( "http://localhost:8000/api/products/" );
 
                 setProducts(res.data)
                 // console.log(res)
