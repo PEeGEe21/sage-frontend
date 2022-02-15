@@ -32,7 +32,7 @@
         /* padding-right: 29px 30px 32px 27px; */
         /* margin-right: 29px ; */
         
-        flex-direction: row;
+        flex-direction: column;
     }
 
     /* .cart .shop_cart_table .table-1 tr td.flex_item img {
