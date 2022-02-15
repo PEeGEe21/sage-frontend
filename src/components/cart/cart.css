@@ -21,3 +21,27 @@
 .cart .shop_cart_table .table-1 tr td .empty_cart_link{
     text-decoration: underline !important;
 }
+
+
+
+
+@media only screen and (max-width: 567px){
+    .cart .shop_cart_table .table-1 tr td.flex_item {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* .cart .shop_cart_table .table-1 tr td.flex_item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cart .shop_cart_table .table-1 tr td.flex_item h6 {
+        font-size: 1px;
+        margin: 21
+    px
+     0 0 27
+    px
+    ;
+    } */
+}

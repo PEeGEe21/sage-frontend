@@ -76,26 +76,26 @@ const Cart = () =>{
                 <tr value={prod.name} key={prod.name}>
                     
     
-                    <td className="flex_item clear_fix" >
+                    <td className="flex_item clear_fix" width="30%" >
                     <Link to={`/our-menu/product/${prod.id}`}>
-                        <img src={prod.image} alt="images" className="float_left" width="70" height="80"/>
+                        <img src={prod.image} alt="images" className="" width="70" height="80"/>
 
-                        <h6 className="float_left">{prod.name}</h6>
+                        <h6 className="">{prod.name}</h6>
                     </Link>
                     </td>
     
-                    <td >
+                    <td width="10%" >
                         {/* <input name="quantity" min="0" defaultValue= type="number"/> */}
                         <p className="d-flex align-items-center justify-content-center">{prod.quantity}</p>
                     </td>
     
-                    <td>
+                    <td width="20%">
                         <span>$ {prod.price}</span>
                     </td>
-                    <td>
+                    <td width="25%">
                         <span className="color2">$ {prod.price*prod.quantity}</span>
                     </td>
-                    <td>
+                    <td width="15%">
                         <input type="checkbox"/> <span>Remove</span>
                     </td>
                 </tr>
@@ -269,7 +269,7 @@ const Cart = () =>{
                                                         {/* {getcartproduct()} */}
                                                         {quantity == null ? (
                                                         <tr>
-                                                            <td>
+                                                            <td colSpan="5">
                                                                 <span className="h1 py-3"> Cart is empty, <a href="/our-menu" className="text-underline empty_cart_link">go back to our menu</a></span>
                                                             </td>
                                                         </tr>
