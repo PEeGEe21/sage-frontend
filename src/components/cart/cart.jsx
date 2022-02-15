@@ -96,7 +96,9 @@ const Cart = () =>{
                         <span className="color2">$ {prod.price*prod.quantity}</span>
                     </td>
                     <td width="15%">
-                        <input type="checkbox"/> <span>Remove</span>
+                        <div className=" remove_btn d-flex align-items-center justify-content-start">
+                        <input type="checkbox"/> <span className="ml-3">Remove</span>
+                        </div>
                     </td>
                 </tr>
     

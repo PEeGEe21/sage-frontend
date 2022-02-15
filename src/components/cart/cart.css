@@ -23,7 +23,10 @@
 }
 
 
-
+.cart .shop_cart_table .table-1 input {
+    display: inline-block;
+    margin-right: 10px;
+}
 
 @media only screen and (max-width: 767px){
     .cart .shop_cart_table .table-1 tr td.flex_item {
@@ -34,6 +37,16 @@
         /* margin-right: 29px ; */
         
         flex-direction: column;
+    }
+
+    .cart .shop_cart_table .table-1 tr td span {
+       width: 200px;
+    }
+    .cart .shop_cart_table .table-1 tr td p {
+       width: 200px;
+    }
+    .cart .shop_cart_table .table-1 tr td .remove_btn {
+       width: 150px;
     }
 
     /* .cart .shop_cart_table .table-1 tr td.flex_item img {
