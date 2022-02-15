@@ -28,7 +28,7 @@
 @media only screen and (max-width: 767px){
     .cart .shop_cart_table .table-1 tr td.flex_item {
         display: flex;
-        padding: 29px 50px 32px 27px;
+        padding: 29px 300px 32px 27px;
         
         flex-direction: row;
     }
