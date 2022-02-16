@@ -15,7 +15,7 @@
     border-radius: 3px;
 }
 
-.cart_btn2.tran3s.disabled{
+.cart_btn2.tran3s:disabled{
     cursor: not-allowed;
     opacity: 0.5;
 

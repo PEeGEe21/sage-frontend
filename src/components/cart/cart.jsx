@@ -356,7 +356,7 @@ const Cart = () =>{
                                                        
 
                                                         {quantity == null ? (
-                                                        <button className="cart_btn2 tran3s color1_bg disabled">Proceed to Checkout</button>
+                                                        <button className="cart_btn2 tran3s color1_bg" disabled>Proceed to Checkout</button>
                                                         ) : <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>}
 
                                                         
@@ -367,13 +367,13 @@ const Cart = () =>{
                                             </div>
 
 
-                                            <button className={`${
+                                            {/* <button className={`${
                                                             quantity == null ? 'disabled' : 'not-disabled'
-                                                          } cart_btn2 tran3s mt-4 cart_custom-btn2`} style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+                                                          } cart_btn2 tran3s mt-4 cart_custom-btn2`} style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button> */}
 
-                                            {/* {quantity == null ? (
-                                                        <button className="cart_btn2 tran3s mt-4 cart_custom-btn2 disabled" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
-                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>} */}
+                                            {quantity == null ? (
+                                                        <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>}
 
                                             
                                             
