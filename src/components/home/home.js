@@ -96,7 +96,7 @@ class Home extends Component {
                 <Testimonial />
                 <ContentArea />
 
-                <ScrollToTop />
+                {/* <ScrollToTop /> */}
                 <Footer />
             </div>
             </div>
