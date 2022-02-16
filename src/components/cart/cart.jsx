@@ -6,7 +6,7 @@ import ContentArea from '../home/components/cta'
 import {CartItems} from '../data'
 import {useSelector, useDispatch} from 'react-redux'
 import { addProduct, clearCart, removeProduct } from '../../redux/cartRedux';
-
+import ClearRounded from '@material-ui/icons/ClearRounded';
 import {Link, useHistory} from 'react-router-dom'
 import axios  from 'axios'
 import Button from '@material-ui/core/Button';
@@ -59,6 +59,11 @@ const Cart = () =>{
         setStates(event.target.value);
     }
 
+    const handleDelete = (id) =>{
+        // setProducts(products.filter((item) => item.id !== id));
+        removeProduct(id, dispatch)
+    }
+
     const onChange = (event) =>{
         setAddress(event.target.value);
     }
@@ -97,9 +102,12 @@ const Cart = () =>{
                     </td>
                     <td width="15%">
                         <div className=" remove_btn d-flex align-items-center justify-content-start">
-                        <input type="checkbox"/> <span className="ml-3">Remove</span>
+                        <ClearRounded /> <span className="ml-3">Remove</span>
                         </div>
                     </td>
+
+
+                    
                 </tr>
     
             )
@@ -153,12 +161,12 @@ const Cart = () =>{
             style: {},
             className: '',
             // Custom Icon
-            icon: '👏',
+            // icon: '👏',
             // Change colors of success/error/loading icon
-            iconTheme: {
-              primary: '#000',
-              secondary: '#fff',
-            },
+            // iconTheme: {
+            //   primary: '#000',
+            //   secondary: '#fff',
+            // },
             // Aria
             ariaProps: {
               role: 'status',
@@ -210,24 +218,25 @@ const Cart = () =>{
                 );
                 console.log(res.data);
                 toast.success('Your order was successful', {
-                    duration: 4000,
+                    duration: 6000,
                     position: 'top-center',
                     // Styling
                     style: {},
                     className: '',
                     // Custom Icon
-                    icon: '👏',
+                    // icon: '👏',
                     // Change colors of success/error/loading icon
-                    iconTheme: {
-                      primary: '#000',
-                      secondary: '#fff',
-                    },
+                    // iconTheme: {
+                    //   primary: '#000',
+                    //   secondary: '#fff',
+                    // },
                     // Aria
                     ariaProps: {
                       role: 'status',
                       'aria-live': 'polite',
                     },
                   });
+                  dispatch(clearCart())
                 // history.push("/success", {data: res.data});
                 // setTimeout(() => {
                 //     Swal.fire({
@@ -247,6 +256,7 @@ const Cart = () =>{
     // cart.total >= 1 && 
     return (
         <>
+        <Toaster/>
             <div className="home   header-sticky  header-v5 hide-topbar-mobile">
                 <div id="page" className="hfeed site">
                     <Navbar />
@@ -271,7 +281,7 @@ const Cart = () =>{
                                                         {/* {getcartproduct()} */}
                                                         {quantity == null ? (
                                                         <tr>
-                                                            <td colSpan="5">
+                                                            <td colSpan="8">
                                                                 <span className="h1 py-3"> Cart is empty, <a href="/our-menu" className="text-underline empty_cart_link">go back to our menu</a></span>
                                                             </td>
                                                         </tr>
@@ -339,14 +349,33 @@ const Cart = () =>{
                                                     stripeKey={KEY}
                                                     
                                                     >
-                                                        <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>
+
+
+  
+                                                        
+                                                       
+
+                                                        {quantity == null ? (
+                                                        <button className="cart_btn2 tran3s color1_bg disabled">Proceed to Checkout</button>
+                                                        ) : <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>}
+
+                                                        
                                                 </StripeCheckout>    
                                                 {/* )} */}
                                         
                                             {/* <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button> */}
                                             </div>
 
-                                            <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+
+                                            <button className={`${
+                                                            quantity == null ? 'disabled' : 'not-disabled'
+                                                          } cart_btn2 tran3s mt-4 cart_custom-btn2`} style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+
+                                            {/* {quantity == null ? (
+                                                        <button className="cart_btn2 tran3s mt-4 cart_custom-btn2 disabled" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>} */}
+
+                                            
                                             
                                             <Form onSubmit={onSubmit}>
 
