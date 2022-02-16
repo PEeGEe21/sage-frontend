@@ -26,7 +26,7 @@ const Products = ({products, filteredProducts}) => {
                 <div className="col-lg-3 col-md-6 col-sm-12 our-menu" key={prod.id}>
                     <div className="item p-3" >
                             <div className="card h-100 text-center" >
-                            <Link to={`/our-menu/product/${prod.id}`}>
+                            <a href={`/our-menu/product/${prod.id}`}>
 
                                 {prod.image ? 
                                     <img  className="mr-2 card-img-top img-fluid img-loop" src={prod.image} alt={prod.name} />
@@ -34,7 +34,7 @@ const Products = ({products, filteredProducts}) => {
                                     <img  className="mr-2 card-img-top img-fluid img-loop" src="/assets/service1.jpg"  />
 
                                 )}
-                            </Link>
+                            </a>
                                 {/* <span className=""> */}
                                     <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
                                         <i className="fas fa-cart-plus ml-1"></i>

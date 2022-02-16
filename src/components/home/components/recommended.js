@@ -165,16 +165,16 @@ class Recommended extends Component {
                         .slice(0, 4).map((prod, i)=>(
                             <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
                                 <div className="item p-3" >
-                                    <Link to={`/our-menu/product/${prod.id}`}>
+                                    <a href={`/our-menu/product/${prod.id}`}>
                                     <div className="card h-100 text-center reco-img">
                                         <img  className="mr-2 card-img-top img-fluid reco img-loop" src={prod.image} alt={prod.name} />
                                     </div>  
-                                    </Link>
+                                    </a>
                                     <div className="my-3 text-center">
                                         <h4>
-                                        <Link className="kt-widget5__title " to={`/our-menu/product/${prod.id}`}>
+                                        <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>
                                         {prod.name}
-                                        </Link>
+                                        </a>
                                         </h4>
                                         <div className=" my-2">
                                         {

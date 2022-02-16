@@ -64,14 +64,14 @@ const CategoryProducts = ({cat, filters, sort}) => {
                 <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
     
                     <div className="item p-3" >
-                        <Link to={`/our-menu/product/${prod.id}`} className="product__link">
+                        <a href={`/our-menu/product/${prod.id}`} className="product__link">
                             <div className="prod-div h-100 text-center">
                                     {/* <span className="like-icon">
                                         {prod.name}
                                     </span> */}
                                 <img className="mr-2 img-fluid img-loop" src={prod.image}  />
                             </div>
-                        </Link>
+                        </a>
                         <div className="my-3 text-left">
                             <h4>
                                 <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>
