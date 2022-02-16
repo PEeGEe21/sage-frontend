@@ -6,6 +6,7 @@ import Hero from './components/hero'
 // import Categories from './components/categories'
 import ContentArea from '../home/components/cta'
 import axios from 'axios'
+import ScrollToTop from '../layout/scrollToTop'
 
 const Categories = () => {
 
@@ -117,6 +118,7 @@ export default function AllCategories() {
                     
                     <Categories />
                     <ContentArea />
+                    {/* <ScrollToTop /> */}
                     <Footer />
                 </div>
             </div>

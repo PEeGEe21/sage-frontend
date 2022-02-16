@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
+import toast, { Toaster } from 'react-hot-toast';
 
 const userSlice = createSlice({
     name:"user",
@@ -14,7 +15,25 @@ const userSlice = createSlice({
         loginSuccess:(state, action)=>{
             state.isFetching=false;
             state.currentUser=action.payload;
-
+            toast.success('Updated Sucessfully', {
+                duration: 4000,
+                position: 'top-center',
+                // Styling
+                style: {},
+                className: '',
+                // Custom Icon
+                icon: '👏',
+                // Change colors of success/error/loading icon
+                iconTheme: {
+                  primary: '#000',
+                  secondary: '#fff',
+                },
+                // Aria
+                ariaProps: {
+                  role: 'status',
+                  'aria-live': 'polite',
+                },
+              });
         },
         loginFailure:(state)=>{
             state.isFetching= false;

@@ -24,6 +24,7 @@ import SelectInput from '@material-ui/core/Select/SelectInput'
 import StripeCheckout from 'react-stripe-checkout';
 import Swal from 'sweetalert2';
 import toast, { Toaster } from 'react-hot-toast';
+import ScrollToTop from '../layout/scrollToTop'
 
 
 
@@ -60,6 +61,8 @@ const Cart = () =>{
     }
 
     const handleDelete = (id) =>{
+        // toast.success('hellooo');
+
         // setProducts(products.filter((item) => item.id !== id));
         removeProduct(id, dispatch)
     }
@@ -100,11 +103,11 @@ const Cart = () =>{
                     <td width="25%">
                         <span className="color2">$ {prod.price*prod.quantity}</span>
                     </td>
-                    <td width="15%">
+                    {/* <td width="15%">
                         <div className=" remove_btn d-flex align-items-center justify-content-start">
                         <ClearRounded /> <span className="ml-3">Remove</span>
                         </div>
-                    </td>
+                    </td> */}
 
 
                     
@@ -213,13 +216,15 @@ const Cart = () =>{
                         tokenId: stripeToken.id,
                         amount: cart.total,
                         description : `Total payment is $${cart.total}`,
+                        cart: cart.products
                         // billingAddress: billAddress
                     }
                 );
                 console.log(res.data);
+                dispatch(clearCart());
                 toast.success('Your order was successful', {
                     duration: 6000,
-                    position: 'top-center',
+                    position: 'bottom-center',
                     // Styling
                     style: {},
                     className: '',
@@ -236,8 +241,8 @@ const Cart = () =>{
                       'aria-live': 'polite',
                     },
                   });
-                  dispatch(clearCart())
-                // history.push("/success", {data: res.data});
+                  
+                    // history.push("/our-menu", {data: res.data});
                 // setTimeout(() => {
                 //     Swal.fire({
                 //         icon: 'success',
@@ -250,7 +255,7 @@ const Cart = () =>{
                 console.log(err)
             }
         };
-        stripeToken && cart.total >= 1 && makeRequest()
+        stripeToken && makeRequest()
     }, [stripeToken, cart.total]);
 
     // cart.total >= 1 && 
@@ -275,7 +280,7 @@ const Cart = () =>{
                                                             <th><span>Quantity (Plates)</span></th>
                                                             <th><span>Meal Price</span></th>
                                                             <th><span>Total</span></th>
-                                                            <th><span>Remove</span></th>
+                                                            {/* <th><span>Remove</span></th> */}
                                                         </tr>
 
                                                         {/* {getcartproduct()} */}
@@ -373,9 +378,8 @@ const Cart = () =>{
 
                                             {quantity == null ? (
                                                         <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
-                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>}
-
-                                            
+                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>}
+{/* href={`https://wa.me/2349028950691?text=${}`} */}
                                             
                                             <Form onSubmit={onSubmit}>
 
@@ -504,6 +508,7 @@ const Cart = () =>{
                     </div>
                          
                         <ContentArea />
+                        {/* <ScrollToTop /> */}
                     <Footer></Footer>
                 
                 </div>

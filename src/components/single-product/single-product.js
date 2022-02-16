@@ -16,6 +16,7 @@ import { useLocation } from 'react-router-dom';
 import { useState, useEffect} from 'react';
 import {axios} from 'axios'
 import { publicRequest } from '../requestMethods'
+import ScrollToTop from '../layout/scrollToTop'
 
 const SingleProduct = () => {
 
@@ -69,6 +70,7 @@ const SingleProduct = () => {
                             </div>
                         </div>
                     </div>
+                    {/* <ScrollToTop /> */}
                 
                 <Footer></Footer>
                 

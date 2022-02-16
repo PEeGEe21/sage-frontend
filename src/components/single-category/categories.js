@@ -9,6 +9,7 @@ import { useState, useEffect} from 'react';
 import {axios} from 'axios'
 import './style.css'
 import { publicRequest } from '../requestMethods'
+import ScrollToTop from '../layout/scrollToTop';
 
 
 const FilterContainer = styled.div`
@@ -139,7 +140,7 @@ const Categories = () => {
                             <CategoryProducts cat={cat} filters={filters} sort={sort}/>
                         </div>
                     </section>
-
+                    {/* <ScrollToTop /> */}
                     <Footer />  
                 </div>
           </div>

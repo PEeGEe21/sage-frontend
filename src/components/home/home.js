@@ -26,6 +26,7 @@ import '../layout/responsive.css'
 import Newsletter from './components/newsletter';
 import PopularProducts from './components/popularproducts';
 import SingleBanner from './components/singlebanner';
+import ScrollToTop from '../layout/scrollToTop';
 
 
 class Home extends Component {
@@ -94,6 +95,8 @@ class Home extends Component {
                 {/* <Newsletter /> */}
                 <Testimonial />
                 <ContentArea />
+
+                <ScrollToTop />
                 <Footer />
             </div>
             </div>

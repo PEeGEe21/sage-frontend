@@ -34,7 +34,7 @@ function MobileNav() {
                     <li className=""><a href="/">Home</a></li>
                     <li><a href="/our-menu" className="">Our Menu</a></li>
                     <li><a href="/categories" className="">Categories</a></li>
-                    <li><a href="/" className="">About Us</a></li>
+                    <li><a href="https://peegee.netlify.app" className="">About Us</a></li>
                     <li><a href="/" className="">Blog</a></li>
                     <li><a href="/" className="">Contact Us</a></li>
                     <li>

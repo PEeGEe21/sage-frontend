@@ -174,7 +174,7 @@ const Navbar = () =>{
                                 
                                 
                                 
-                                <li className="nav_item"><a href="/">About Us</a></li>
+                                <li className="nav_item"><a href="https://peegee.netlify.app">About Us</a></li>
                                 {/* <li className="nav_item"><Link to='/login' className="nav-link">Login</Link></li> */}
 
                                 <li className="nav_item"><a href="/">Blog</a></li>

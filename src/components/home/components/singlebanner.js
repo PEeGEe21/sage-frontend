@@ -24,8 +24,8 @@ export default class SingleBanner extends Component{
 
                                     <div className="promo-text">
                                         <h2 className="text-white">Suyaaa</h2>
-                                        <p className="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat autem asperiores saepe esse dolorem odio obcaecati cupiditate</p>
-                                        <a href="" className="promo-link">visit shop <ArrowForwardIosSharp className="promo-icon"/>
+                                        <p className="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat autem asperiores saepe esse dolorem odio obcaecati cupiditate ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat autem asperiores saepe esse dolorem odio obcaecati cupiditate</p>
+                                        <a href="" className="promo-link">see meal <ArrowForwardIosSharp className="promo-icon"/>
                                         <div className="promo-line"></div>
                                         </a>
                                     </div>

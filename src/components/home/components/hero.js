@@ -62,7 +62,7 @@ export default function Hero(){
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>
-                                                <a href="" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
+                                                <a href="/our-menu" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
                                             </div>
 
                                         </div>
@@ -100,7 +100,7 @@ export default function Hero(){
                                             <div className="caption">lorem Ipsum Dolor <br/>kscs snksc </div>
                                             <div className="paratext d-flex flex-wrap">Get started, Create an account and start enjoying <br/>our service</div>
                                             <div>
-                                                <a href="" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
+                                                <a href="/our-menu" className="hero-btn"><span>Our Menu <i className="fa fa-arrow-right"></i></span></a>
                                             </div>
                                         </div>
                                     </div>

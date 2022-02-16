@@ -7,6 +7,7 @@ import Products from './components/products'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import ScrollToTop from '../layout/scrollToTop'
 
 
 
@@ -113,6 +114,7 @@ const ProductsList = () => {
 
                     <Products products={products} filteredProducts={filteredProducts}/>
                     <ContentArea />
+                    {/* <ScrollToTop /> */}
                     <Footer/>
                 </div>
             </div>
