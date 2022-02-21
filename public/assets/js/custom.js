@@ -72,6 +72,12 @@ $(document).ready(function()
             topSpacing: 0
         });
     }
+
+    if ($.fn.sticky) {
+        $(".header-auth").sticky({
+            topSpacing: 0
+        });
+    }
 	
 	/* 
 

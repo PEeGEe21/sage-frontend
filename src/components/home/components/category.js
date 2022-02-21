@@ -8,6 +8,7 @@ import 'jquery/dist/jquery';
 import 'popper.js/dist/umd/popper';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
+import { Spinner } from 'react-bootstrap';
 
 
 
@@ -142,7 +143,17 @@ class Category extends Component {
                         </div>
 
                         <div className="row category d-flex justify-content-center align-items-center">
-                            {this.getCategoryRow()}
+                            {this.state.categoriesData == null ? this.getCategoryRow() : 
+                            <span className="text-center">
+                            <Spinner
+                                  animation="border"
+                                  variant="secondary"
+                                  size="xl"
+                                  role="status"
+                                  aria-hidden="true"
+                                /> </span>
+                            
+                            }
                         </div>
                         <div className="mf-button align-center style-1 margtop40">
                             <a className="button cat-btn no-marg has-background" href="/categories">View All Categories</a>

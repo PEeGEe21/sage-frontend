@@ -118,45 +118,24 @@ const Cart = () =>{
     
     }
 
-    const cartproduct = () =>{
-        return CartItems.map((prod)=>{
+    // const cartproduct = () =>{
+    //     return CartItems.map((prod)=>{
     
-            return(
-                <li key={prod.id}>
-                    {prod.name}
-                </li>
+    //         return(
+    //             <li key={prod.id}>
+    //                 {prod.name}
+    //             </li>
                 
-                // <tr >
-                    
+                
     
-                //     <td className="flex_item clear_fix" >
-
-                //         <h6 className="float_left">{prod.name}</h6>
-                //     </td>
+    //         )
+    //     })
     
-                //     <td>
-                //         <input name="quantity" min="0" defaultValue={prod.quantity} type="number"/>
-                //     </td>
-    
-                //     <td>
-                //         <span>$ {prod.price}</span>
-                //     </td>
-                //     <td>
-                //         <span className="color2">$ {prod.price*prod.quantity}</span>
-                //     </td>
-                //     <td>
-                //         <input type="checkbox"/> <span>Remove</span>
-                //     </td>
-                // </tr>
-    
-            )
-        })
-    
-    }
+    // }
 
   
     const smsOrder = (event) => {
-        // setOpen(true);
+        setOpen(true);
         toast.success('Your order was successful', {
             duration: 4000,
             position: 'bottom-center',
@@ -377,7 +356,7 @@ const Cart = () =>{
                                                           } cart_btn2 tran3s mt-4 cart_custom-btn2`} style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button> */}
 
                                             {quantity == null ? (
-                                                        <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button>
+                                                        <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>
                                                         ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>}
 {/* href={`https://wa.me/2349028950691?text=${}`} */}
                                             
@@ -403,6 +382,8 @@ const Cart = () =>{
                                                             <th><span>Product Price</span></th>
                                                             <th><span>Total</span></th>
                                                         </tr>
+
+                                                        {/* {cart.products} */}
 
                                                         {
                                                             cart.products.map((prod)=>{

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import './menu.css'
 import {AllMenu} from './../../data'
+import { Spinner } from 'react-bootstrap';
 
 
 
@@ -123,7 +124,13 @@ const Menu = () => {
                             <a href="/our-menu" className="mf-btn-2 cat-btn d-none d-lg-block">View More</a>
                         </div>
                         <div className="row">
-                                {getProductRow()}
+                                {products == null ? getProductRow() : <span className="text-center"> <Spinner
+                                  animation="border"
+                                  variant="secondary"
+                                  size="xl"
+                                  role="status"
+                                  aria-hidden="true"
+                                /> </span> }
 
                                <div className="mf-button d-flex justify-content-center align-center style-1 margtop40">
                                     <a href="/our-menu" className="mf-btn-2 view-more d-block d-lg-none ">View More</a>

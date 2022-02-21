@@ -43,7 +43,9 @@
     z-index: 99 !important;
 }
 
-.header-sticky .site-header
+.header-sticky .site-header,
+.header-sticky .header-auth
+
 {
     z-index: 9999 !important;
     -webkit-transition: all 1s !important;
@@ -54,6 +56,11 @@
 	/* top: -57px; */
     transition: all 1s ease;
 }
+
+.header-sticky .header-auth{
+	background: #fff;
+}
+
 
 @media only screen and (max-width: 568px) {
     .header-sticky .site-header.scrolled
@@ -67,3 +74,17 @@
         padding-top: 20px !important;
     }
 }
+
+.mf-btn.cst-btn{
+	background-color: #252525 !important;
+	color: #ffffff;
+}
+.mf-btn.cst-btn:hover,
+.mf-btn.cst-btn:active,
+.mf-btn.cst-btn:focus{
+	/* background-color: #252525 !important; */
+	color: #ffffff;
+}
+
+
+

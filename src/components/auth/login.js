@@ -105,9 +105,9 @@ const LogIn = () =>{
                       <div className="col-lg-6 px-4 px-lg-5 mb-5">
                         <div className="card ">
                           <div className="card-body">                        
-                            <form noValidate onSubmit={onSubmit}>
+                            <form noValidate onSubmit={onSubmit} className="login_frm">
                               <div className="text-center section-title">
-                                <h2 className="text-muted mb-3">Sign In</h2>
+                                <h2 className="text-muted ">Sign In</h2>
                               </div>
                               <div className="px-3">
                             {/* <TextInputGroup
@@ -121,7 +121,8 @@ const LogIn = () =>{
                               error={errors.email}
                             /> */}
                             <TextInputGroup
-                              // label="Username"
+                              id="username"
+                              label="Username"
                               name="username"
                               type="text"
                               required="required"
@@ -129,9 +130,11 @@ const LogIn = () =>{
                               defaultValue={state.username}
                               onChange={(e) => setUsername(e.target.value)}
                               error={errors.username}
+                              autocomplete="off"
                             />
                             <TextInputGroup
-                              // label="Password"
+                              id="password"
+                              label="Password"
                               name="password"
                               type="password"
                               required="required"
@@ -139,6 +142,7 @@ const LogIn = () =>{
                               defaultValue={state.password}
                               onChange={(e) => setPassword(e.target.value)}
                               error={errors.password}
+
                             />
                             <button
                               type="submit"
@@ -173,14 +177,13 @@ const LogIn = () =>{
 
                             {/* { error && <p style={{color: 'red'}}>Something went wrong</p> } */}
                             <p className="text-left p-signin_form">
-                              Don't have an account?{' '} <Link to="/signup">Sign Up</Link>
+                              Don't have an account?{' '} <a href="/signup" className="text-underline">Sign Up</a>
   
                               {/* <a href=""></a> */}
                             </p>
   
                             <p className="text-left p-signin_form">
-                              Looking to create a workspace instead?{' '}
-                              <a href="">Create a new workspace</a>
+                              <a href="">Forgot Password?</a>
                             </p>
                           </div>
                             </form>

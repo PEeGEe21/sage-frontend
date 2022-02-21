@@ -11,10 +11,12 @@ const TextInputGroup = ({
   onChange,
   error,
   text,
+  id,
+  autocomplete,
 }) => {
   return (
     <div className="form-group">
-      <label htmlFor={name}>{label}</label>
+      
       <input
         type={type}
         name={name}
@@ -24,7 +26,10 @@ const TextInputGroup = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        id={id}
+        autocomplete={autocomplete}
       />
+      <label htmlFor={id}>{label}</label>
       {error && <div className="invalid-feedback">{error}</div>}
       {
         <small id="passwordHelpBlock" className="form-text text-muted">
@@ -37,6 +42,7 @@ const TextInputGroup = ({
 
 TextInputGroup.propTypes = {
   label: PropTypes.string,
+  id: PropTypes.string,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string,
@@ -44,6 +50,8 @@ TextInputGroup.propTypes = {
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
   text: PropTypes.string,
+  autocomplete: PropTypes.string,
+  
 };
 
 TextInputGroup.defaultProps = {

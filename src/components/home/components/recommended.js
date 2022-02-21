@@ -13,6 +13,7 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import LikeButton from './likebutton';
+import { Spinner } from 'react-bootstrap';
 
 
 
@@ -161,54 +162,72 @@ class Recommended extends Component {
                         > */}
                         <div className="row recommended">
                         {/* {RecommendedProducts.sort(()=> Math.random() - Math.random()) */}
-                        {this.state.productsData.sort(()=> Math.random() - Math.random())
-                        .slice(0, 4).map((prod, i)=>(
-                            <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
-                                <div className="item p-3" >
-                                    <a href={`/our-menu/product/${prod.id}`}>
-                                    <div className="card h-100 text-center reco-img">
-                                        <img  className="mr-2 card-img-top img-fluid reco img-loop" src={prod.image} alt={prod.name} />
-                                    </div>  
-                                    </a>
-                                    <div className="my-3 text-center">
-                                        <h4>
-                                        <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>
-                                        {prod.name}
-                                        </a>
-                                        </h4>
-                                        <div className=" my-2">
-                                        {
-                                        prod.deleted_price &&
-
-                                            <span className="mr-3" style={{marginRight:"10px"}}>
-                                                <del> $<span>{prod.deleted_price}</span></del>
-                                            </span>
-                                        }
-                                            {prod.price && 
-                                            <span className="kt-widget5__desc pl-4"> 
-                                              $<span>{ prod.price}</span>
-                                            </span>
-                                            }
-                                        </div>
-                                        
-                                    </div>
-                                    <div className=" d-flex justify-content-center align-items-center mt-3"> 
-                                        {/* <button className="btn btn-outline-dark mr-3" onClick={this.onFavoriteClick}>
-                                          {this.state.color ? <i className="fa fa-heart" style={{color: 'red'}}></i> : <i className="far fa-heart"></i> }
+                        {this.state.productsData == null ? 
+                        
+                        
+                        
+                        this.state.productsData.sort(()=> Math.random() - Math.random())
+                          .slice(0, 4).map((prod, i)=>(
+                              <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
+                                  <div className="item p-3" >
+                                      <a href={`/our-menu/product/${prod.id}`}>
+                                      <div className="card h-100 text-center reco-img">
+                                          <img  className="mr-2 card-img-top img-fluid reco img-loop" src={prod.image} alt={prod.name} />
+                                      </div>  
+                                      </a>
+                                      <div className="my-3 text-center">
+                                          <h4>
+                                          <a className="kt-widget5__title " href={`/our-menu/product/${prod.id}`}>
+                                          {prod.name}
+                                          </a>
+                                          </h4>
+                                          <div className=" my-2">
+                                          {
+                                          prod.deleted_price &&
+  
+                                              <span className="mr-3" style={{marginRight:"10px"}}>
+                                                  <del> $<span>{prod.deleted_price}</span></del>
+                                              </span>
+                                          }
+                                              {prod.price && 
+                                              <span className="kt-widget5__desc pl-4"> 
+                                                $<span>{ prod.price}</span>
+                                              </span>
+                                              }
+                                          </div>
                                           
+                                      </div>
+                                      <div className=" d-flex justify-content-center align-items-center mt-3"> 
+                                          {/* <button className="btn btn-outline-dark mr-3" onClick={this.onFavoriteClick}>
+                                            {this.state.color ? <i className="fa fa-heart" style={{color: 'red'}}></i> : <i className="far fa-heart"></i> }
+                                            
+                                            
+                                            </button> */}
+                                            {/* <LikeButton/> */}
+  
                                           
-                                          </button> */}
-                                          {/* <LikeButton/> */}
+                                          <Link className="btn btn-outline-dark order " to={`/our-menu/product/${prod.id}`}>
+                                              Order Now <i className="fas fa-cart-plus ml-1"></i>
+                                          </Link>
+                                      
+                                      </div> 
+                                  </div>    
+                              </div>
+                          ))
+                        
+                        
+                        
+                        
+                        : <span className="text-center"> <Spinner
+                                  animation="border"
+                                  variant="secondary"
+                                  size="xl"
+                                  role="status"
+                                  aria-hidden="true"
+                                /> </span> }
 
-                                        
-                                        <Link className="btn btn-outline-dark order " to={`/our-menu/product/${prod.id}`}>
-                                            Order Now <i className="fas fa-cart-plus ml-1"></i>
-                                        </Link>
-                                    
-                                    </div> 
-                                </div>    
-                            </div>
-                        ))}
+
+                        
                         </div>
 
                             {/* </OwlCarousel> */}

@@ -102,12 +102,14 @@ class SignUp extends Component {
 
                     <div className="col-lg-7">
                     <div>
-                        <form noValidate onSubmit={this.handleSubmit}>
+                        <form noValidate onSubmit={this.handleSubmit} className="login_frm sign-up-frm">
                         <div className="text-center section-title">
-                          <h2 className="text-muted mb-3">Sign Up</h2>
+                          <h2 className="text-muted">Sign Up</h2>
                         </div>
                         <div className="px-3 px-lg-5">
                           <TextInputGroup
+                            id="first_name"
+                            label="First Name"
                             name="first_name"
                             type="text"
                             required="required"
@@ -117,6 +119,8 @@ class SignUp extends Component {
                             error={errors.first_name}
                           />
                           <TextInputGroup
+                            id="last_name"
+                            label="Last Name"
                             name="last_name"
                             type="text"
                             required="required"
@@ -126,6 +130,8 @@ class SignUp extends Component {
                             error={errors.last_name}
                           />
                           <TextInputGroup
+                            id="email"
+                            label="Email"
                             name="email"
                             type="email"
                             required="required"
@@ -135,6 +141,8 @@ class SignUp extends Component {
                             error={errors.email}
                           />
                           <TextInputGroup
+                            id="username"
+                            label="Username"
                             name="username"
                             type="text"
                             required="required"
@@ -144,6 +152,8 @@ class SignUp extends Component {
                             error={errors.username}
                           />
                           <TextInputGroup
+                            id="password"
+                            label="Password"
                             name="password"
                             type="password"
                             required="required"
@@ -154,6 +164,8 @@ class SignUp extends Component {
                           />
 
                           <TextInputGroup
+                            id="password2"
+                            label="Confirm Password"
                             name="password2"
                             type="password"
                             required="required"
@@ -182,7 +194,7 @@ class SignUp extends Component {
                             )}
                           </button>
                           <p className="text-left p-signin_form">
-                            Already have an account?{' '} <Link to="/login">Sign in to your Account</Link>
+                            Already have an account?{' '} <a href="/login" className="text-underline ">Sign in to your Account</a>
                             {/* <a href="/login"></a> */}
                           </p>
 

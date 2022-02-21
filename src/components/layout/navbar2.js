@@ -14,7 +14,7 @@ export default function Navbar2(){
     return(
         <React.Fragment>
             <Announcement />
-            <div id="topbar" className="topbar hidden-md hidden-sm hidden-xs">
+            <div id="topbar" className="topbar hidden-md hidden-sm hidden-xs text-white">
             <div className="container">
 
                 <div className="topbar-left topbar-widgets text-left clearfix">
@@ -25,7 +25,7 @@ export default function Navbar2(){
                     </div>
                 </div>
 
-                <div className="topbar-right topbar-widgets text-right clearfix">
+                <div className="topbar-right topbar-widgets text-right clearfix ">
                     <div className="widget induscity-office-location-widget">
                         <div className="office-location clearfix">
                             <ul className="office-1 topbar-office active" id="cargohub-office-1">
@@ -38,7 +38,7 @@ export default function Navbar2(){
             </div>
         </div>
 
-            <div className="header2 header-main">
+            <div className="header2 header-main header-auth">
                 <div className="container">
                     <div className="menu-row justify-content-between">
                         <div className="site-logo col-md-9 col-sm-9 col-xs-9">
@@ -55,17 +55,17 @@ export default function Navbar2(){
                                 <li className="nav_item"><a href="/categories">Categories</a></li>
                                     
 
-                                <li className="nav_item"><a href="/">About Us</a></li>
+                                <li className="nav_item"><a href="https://peegee.metlify.app">About Us</a></li>
                                 {/* <li className="nav_item"><Link to='/login' className="nav-link">Login</Link></li> */}
 
                                 <li className="nav_item"><a href="/">Blog</a></li>
-                              <li className="nav_item"><a href="/">Contact</a></li>
+                              <li className="nav_item"><a href="/">Contact Us</a></li>
                                     
                                 <li id="mf-active-menu" className="mf-active-menu" style={{left: '40.25px', width: '0px'}}></li></ul>
                             </nav>
                             {/* <SearchButton /> */}
 
-                            <div className="mf-header-item-button"><a href="#" className="mf-btn">ContactUs</a></div>
+                            {/* <div className="mf-header-item-button"><a href="/#" className="mf-btn cst-btn">Contact Us</a></div> */}
 
 
                         </div>
