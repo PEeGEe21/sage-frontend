@@ -46,7 +46,7 @@ const Cart = () =>{
 
     const cart = useSelector(state=>state.cart)
 
-    console.log(cart)
+    // console.log(cart)
     
     const [address, setAddress] = useState('');
 
@@ -81,7 +81,7 @@ const Cart = () =>{
         return cart.products.map((prod)=>{
     
             return(
-                <tr value={prod.name} key={prod.name}>
+                <tr value={prod.name} key={prod.id}>
                     
     
                     <td className="flex_item clear_fix" width="30%" >
@@ -170,7 +170,7 @@ const Cart = () =>{
             address: address,
             // meals: cartproduct()
         };
-        console.log(data);
+        // console.log(data);
 
     }
 
@@ -179,7 +179,7 @@ const Cart = () =>{
     }
 
     const quantity = useSelector(state=>state.cart.quantity)
-
+    // console.log(quantity);
     // const RemoveCartItem =() =>{
     //     dispatch(removeProduct({...product, quantity}))
     // }
@@ -234,7 +234,7 @@ const Cart = () =>{
                 console.log(err)
             }
         };
-        stripeToken && makeRequest()
+        stripeToken && cart.total >= 1 && makeRequest()
     }, [stripeToken, cart.total]);
 
     // cart.total >= 1 && 
@@ -322,6 +322,8 @@ const Cart = () =>{
                                                 {/* {stripeToken ? (<span>Processing. Please wait....</span>) : ( 
                                                     onClick={()=> setBillAddress(billingAddress)}
                                                     */}
+
+                                            {quantity !== null ? (
                                                 <StripeCheckout 
                                                     name= "Sage Restaurant" 
                                                     image= "/assets/logo.svg"
@@ -338,15 +340,17 @@ const Cart = () =>{
   
                                                         
                                                        
-
-                                                        {quantity == null ? (
+                                                    <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>
+                                                        {/* {quantity == null ? (
                                                         <button className="cart_btn2 tran3s color1_bg" disabled>Proceed to Checkout</button>
-                                                        ) : <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>}
+                                                        ) : <button className="cart_btn2 tran3s color1_bg">Proceed to Checkout</button>} */}
 
                                                         
                                                 </StripeCheckout>    
-                                                {/* )} */}
                                         
+                                                ) : <button className="cart_btn2 tran3s color1_bg" disabled>Proceed to Checkout</button>
+
+                                            }
                                             {/* <button className="cart_btn2 tran3s" style={{background: '#121d2f'}} onClick={smsOrder}>Order via SMS</button> */}
                                             </div>
 
@@ -357,7 +361,7 @@ const Cart = () =>{
 
                                             {quantity == null ? (
                                                         <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>
-                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>}
+                                                        ) : <button className="cart_btn2 tran3s mt-4 cart_custom-btn2" disabled style={{background: '#121d2f'}} onClick={smsOrder}>Order via Whatsapp</button>}
 {/* href={`https://wa.me/2349028950691?text=${}`} */}
                                             
                                             <Form onSubmit={onSubmit}>

@@ -72,7 +72,7 @@ const ProductDetails = ({product})=>{
         )
 
         setClicked(true)
-        console.log(addProduct)
+        // console.log(addProduct)
     }
     
     return(

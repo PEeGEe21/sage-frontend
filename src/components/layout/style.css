@@ -1239,6 +1239,7 @@ Header
   padding-bottom: 65px;
 }
 
+
 .header-v5 .site-menu {
   position: absolute;
   left: 50%;
@@ -1299,6 +1300,14 @@ Header
 .header-v5 .site-contact {
   padding-bottom: 55px;
   padding-top: 25px;
+}
+
+@media (max-width: 1199px){
+  .site-contact, .header-v5 .site-contact {
+      
+      padding-bottom: 30px;
+  }
+ 
 }
 
 .header-v5 .mf-header-item-button {

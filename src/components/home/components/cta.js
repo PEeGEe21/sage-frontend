@@ -13,7 +13,7 @@ export default class ContentArea extends Component{
                                     <h2>You can order by calling us on phone</h2>
                                 </div>
                             </div>
-                            <div className="col-xl-2 col-lg-2 col-md-3">
+                            <div className="col-xl-2 col-lg-3 col-md-3">
                                 <a href="tel: +234 902 895 0691" className="btn btn-black f-right">Contact Us</a>
                             </div>
                         </div>

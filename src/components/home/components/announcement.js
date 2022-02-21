@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import './anon.css'
 
 const TopAnnouncement = styled.div`
     height:30px;
@@ -9,7 +10,8 @@ const TopAnnouncement = styled.div`
     align-items: center;
     justify-content:center;
     font-size:14px;
-    font-weight: 500
+    font-weight: 500;
+    position:relative
 `
 // .announcement{
 //     height:30px;
@@ -21,7 +23,9 @@ const Announcement = () => {
     return (
         <>
             <TopAnnouncement>
-                Super Deal! Free delivery on orders over $50
+                <p className="my-0 annon">
+                    Super Deal! Free delivery on orders over $50
+                </p>
             </TopAnnouncement>  
         </>
     )

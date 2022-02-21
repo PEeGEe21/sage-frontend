@@ -82,7 +82,7 @@ class Category extends Component {
                 // console.log(categories);
             })
             .catch((error) => {
-                console.log('Error');
+                
       });
       }
     //   return CategoryItems.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{

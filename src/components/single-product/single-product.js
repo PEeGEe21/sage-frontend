@@ -60,7 +60,7 @@ const SingleProduct = () => {
 
                                         <Reviews product={product} props={product}></Reviews>
 
-                                        <RelatedProducts product={product} cat={cat}></RelatedProducts>
+                                        {/* <RelatedProducts product={product} cat={cat}></RelatedProducts> */}
                                         
                                     </div>
                                 </div>

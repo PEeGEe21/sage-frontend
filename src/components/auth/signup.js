@@ -117,6 +117,7 @@ class SignUp extends Component {
                             defaultValue={this.state.first_name}
                             onChange={this.handleChange}
                             error={errors.first_name}
+                            autocomplete="off"
                           />
                           <TextInputGroup
                             id="last_name"
@@ -128,6 +129,7 @@ class SignUp extends Component {
                             defaultValue={this.state.last_name}
                             onChange={this.handleChange}
                             error={errors.last_name}
+                            autocomplete="off"
                           />
                           <TextInputGroup
                             id="email"
@@ -139,6 +141,7 @@ class SignUp extends Component {
                             defaultValue={this.state.email}
                             onChange={this.handleChange}
                             error={errors.email}
+                            autocomplete="off"
                           />
                           <TextInputGroup
                             id="username"
@@ -150,6 +153,7 @@ class SignUp extends Component {
                             defaultValue={this.state.username}
                             onChange={this.handleChange}
                             error={errors.username}
+                            autocomplete="off"
                           />
                           <TextInputGroup
                             id="password"
