@@ -64,14 +64,14 @@ const Menu = () => {
                        
 
                             <div className="kt-widget5__pic text-center">
-                            <Link  to={`/our-menu/product/${prod.id}`}>
+                            <a  href={`/our-menu/product/${prod.id}`}>
                                 {prod.image ? 
                                     <img  className="mr-2 card-img-top img-fluid cat-img-loop menu-img-sty img-sty" src={prod.image} alt={prod.name} />
                                     : (
                                     <img  className="mr-2 card-img-top img-fluid cat-img-loop menu-img-sty img-sty" src="/assets/service1.jpg"  />
 
                                 )}
-                                </Link>
+                                </a>
 
                                 <a className="menu-cart-icon" href={`/our-menu/product/${prod.id}`}>
                                     <i className="fas fa-cart-plus ml-1"></i>

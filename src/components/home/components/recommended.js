@@ -203,9 +203,9 @@ class Recommended extends Component {
                                             {/* <LikeButton/> */}
   
                                           
-                                          <Link className="btn btn-outline-dark order " to={`/our-menu/product/${prod.id}`}>
+                                          <a className="btn btn-outline-dark order " href={`/our-menu/product/${prod.id}`}>
                                               Order Now <i className="fas fa-cart-plus ml-1"></i>
-                                          </Link>
+                                          </a>
                                       
                                       </div> 
                                   </div>    
