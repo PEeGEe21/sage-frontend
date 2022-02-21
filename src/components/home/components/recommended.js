@@ -162,11 +162,8 @@ class Recommended extends Component {
                         > */}
                         <div className="row recommended">
                         {/* {RecommendedProducts.sort(()=> Math.random() - Math.random()) */}
-                        {this.state.productsData == null ? 
                         
-                        
-                        
-                        this.state.productsData.sort(()=> Math.random() - Math.random())
+                        {this.state.productsData.sort(()=> Math.random() - Math.random())
                           .slice(0, 4).map((prod, i)=>(
                               <div className="col-lg-3 col-md-6 col-sm-12" key={prod.id}>
                                   <div className="item p-3" >
@@ -213,18 +210,7 @@ class Recommended extends Component {
                                       </div> 
                                   </div>    
                               </div>
-                          ))
-                        
-                        
-                        
-                        
-                        : <span className="text-center"> <Spinner
-                                  animation="border"
-                                  variant="secondary"
-                                  size="xl"
-                                  role="status"
-                                  aria-hidden="true"
-                                /> </span> }
+                          ))}
 
 
                         

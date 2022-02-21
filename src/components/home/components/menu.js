@@ -124,13 +124,14 @@ const Menu = () => {
                             <a href="/our-menu" className="mf-btn-2 cat-btn d-none d-lg-block">View More</a>
                         </div>
                         <div className="row">
-                                {products == null ? getProductRow() : <span className="text-center"> <Spinner
+                                {/* {products == null ? getProductRow() : <span className="text-center"> <Spinner
                                   animation="border"
                                   variant="secondary"
                                   size="xl"
                                   role="status"
                                   aria-hidden="true"
-                                /> </span> }
+                                /> </span> } */}
+                                {getProductRow()}
 
                                <div className="mf-button d-flex justify-content-center align-center style-1 margtop40">
                                     <a href="/our-menu" className="mf-btn-2 view-more d-block d-lg-none ">View More</a>

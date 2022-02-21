@@ -143,7 +143,7 @@ class Category extends Component {
                         </div>
 
                         <div className="row category d-flex justify-content-center align-items-center">
-                            {this.state.categoriesData == null ? this.getCategoryRow() : 
+                            {/* {this.state.categoriesData == null ? this.getCategoryRow() : 
                             <span className="text-center">
                             <Spinner
                                   animation="border"
@@ -153,7 +153,9 @@ class Category extends Component {
                                   aria-hidden="true"
                                 /> </span>
                             
-                            }
+                            } */}
+
+                            {this.getCategoryRow()}
                         </div>
                         <div className="mf-button align-center style-1 margtop40">
                             <a className="button cat-btn no-marg has-background" href="/categories">View All Categories</a>

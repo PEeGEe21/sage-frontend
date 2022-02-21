@@ -8,9 +8,12 @@ import SearchButton from './searchbutton'
 import MobileNav from './sidebar'
 import './style.css'
 
+import {useSelector} from 'react-redux'
 
 export default function Navbar2(){
-    const quantity = null
+    const quantity = useSelector(state=>state.cart.quantity)
+
+    // const quantity = null
     return(
         <React.Fragment>
             <Announcement />

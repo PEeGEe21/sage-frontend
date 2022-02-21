@@ -11,6 +11,7 @@ import {CategoryItems} from '../data'
 import Announcement from '../home/components/announcement'
 import TopBar from './topbar';
 import {useSelector} from 'react-redux'
+
 import SearchButton from './searchbutton';
 import MobileNav from './sidebar';
 
