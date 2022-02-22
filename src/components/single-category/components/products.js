@@ -93,9 +93,9 @@ const CategoryProducts = ({cat, filters, sort}) => {
                                     )}
                             </div>
                                 
-                            <button className="btn btn-outline-dark order ">
+                            <a className="btn btn-outline-dark order " href={`/our-menu/product/${prod.id}`}>
                             Order Now <i className="fas fa-cart-plus ml-1"></i>
-                        </button>
+                        </a>
                             
                                         
                         </div>
