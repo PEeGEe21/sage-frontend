@@ -30,23 +30,63 @@ const RelatedProducts = ({product, cat}) =>{
         getProducts()
     }, [cat])
         
-    
+    const number = products.length
+    console.log(number, "numberrrr");
     const getProductRow = () =>{
-        return products.slice(0, 6).map((prod)=>{
+
+        if(number >= 2){
+           return products.slice(0, 3).map((prod)=>{
     
-            return(
-                <li className="product col-sm-12 col-xs-12 col-md-4">
-                    <div className="product-inner">
-                        <a href="#" className="woocommerce-loop-product__link"><img width="270" height="270" src="/assets/products/product6.jpg" alt=""/></a>
-                        <div className="product-info">
-                            <h4><a href="#">{prod.name}</a></h4>
-                            <span className="price">$19.99</span>
-                            <div className="product-footer"><a href="#" className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
+                return(
+                    <li className="product col-sm-12 col-xs-12 col-md-4" key={prod.id}>
+                        <div className="product-inner">
+                            <a href={`/our-menu/product/${prod.id}`} className="woocommerce-loop-product__link"><img width="270" height="270" src={prod.image} alt=""/></a>
+                            <div className="product-info">
+                                <h4><a href={`/our-menu/product/${prod.id}`}>{prod.name}</a></h4>
+                                <span className="price">
+                                
+                                    {prod.deleted_price && 
+
+                                        <span className="mr-3" style={{marginRight:"10px"}}>
+                                                <del> $<span>{prod.deleted_price}</span></del>
+                                        </span> 
+                                    }
+                                    $<span>{prod.price}</span> 
+                                </span>
+                                <div className="product-footer"><a href={`/our-menu/product/${prod.id}`} className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                )
+            }) 
+        }else if(number == 1){
+            return(
+                <li className="product col-sm-12 col-xs-12 col-md-4" key={product.id}>
+                        <div className="product-inner">
+                            <a href={`/our-menu/product/${product.id}`}  className="woocommerce-loop-product__link"><img width="270px" height="270px" src={product.image} alt=""/></a>
+                            <div className="product-info">
+                                <h4><a href={`/our-menu/product/${product.id}`} >{product.name}</a></h4>
+                                <span className="price">
+                                
+                                    {product.deleted_price && 
+
+                                        <span className="mr-3" style={{marginRight:"10px"}}>
+                                                <del> $<span>{product.deleted_price}</span></del>
+                                        </span> 
+                                    }
+                                    $<span>{product.price}</span> 
+                                </span>
+                                <div className="product-footer"><a href={`/our-menu/product/${product.id}`}  className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
+                            </div>
+                        </div>
+                    </li>
             )
-        })
+        }else{
+            return(
+                <span></span>
+            )
+        }
+        
     }
     
     
@@ -70,14 +110,19 @@ const RelatedProducts = ({product, cat}) =>{
 
 
         return(
-            <section className="related products">
+            <div>
+
+            
+            {
+                number && 
+                <section className="related products">
                 <div className="container">
                     <div className="related-section-title">
                         <h2 className="related-title mf-heading-primary">Related Products</h2>
                     </div>
-                    <ul className="products">
-                    {/* {getProductRow()} */}
-                    <li className="product col-sm-12 col-xs-12 col-md-4">
+                    <ul className="row products" >
+                    {getProductRow()}
+                    {/* <li className="product col-sm-12 col-xs-12 col-md-4">
                                     <div className="product-inner">
                                         <a href="#" className="woocommerce-loop-product__link"><img width="270" height="270" src="/assets/products/product6.jpg" alt=""/></a>
                                         <div className="product-info">
@@ -86,11 +131,16 @@ const RelatedProducts = ({product, cat}) =>{
                                             <div className="product-footer"><a href="#" className="button add_to_cart_button"><i className="fas fa-cart-plus mr-2"></i>Add to cart</a></div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> */}
                     </ul>
                 </div>
             </section>
+
    
+            }
+
+</div>
+            
     )
     
     

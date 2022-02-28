@@ -1,4 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const cartSlice = createSlice({
     name:"cart",
@@ -12,6 +14,26 @@ const cartSlice = createSlice({
             state.quantity += 1;
             state.products.push(action.payload);
             state.total += action.payload.price * action.payload.quantity;
+
+            toast.success('Added to Cart Sucessfully', {
+                duration: 4000,
+                position: 'bottom-right',
+                // Styling
+                style: {},
+                className: '',
+                // Custom Icon
+                icon: '👏',
+                // Change colors of success/error/loading icon
+                iconTheme: {
+                  primary: '#000',
+                  secondary: '#fff',
+                },
+                // Aria
+                ariaProps: {
+                  role: 'status',
+                  'aria-live': 'polite',
+                },
+              });
         },
         removeProduct:(state, action) =>{
             state.quantity -= 1;

@@ -19,6 +19,11 @@ const CategoryProducts = ({cat, filters, sort}) => {
     
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const [filtProducts] = useState(()=>{
+        console.log("yoo")
+
+    });
+
 
     useEffect(()=>{
         const getProducts = async ()=>{
@@ -82,7 +87,7 @@ const CategoryProducts = ({cat, filters, sort}) => {
                                 {prod.deleted_price && 
 
                                    <span className="mr-3" style={{marginRight:"10px"}}>
-                                        <del> $<span>{prod.deleted_price}</span> </del>
+                                        <del> $<span>{prod.deleted_price}</span></del>
                                 </span> 
                                 }
                                 
@@ -93,7 +98,7 @@ const CategoryProducts = ({cat, filters, sort}) => {
                                     )}
                             </div>
                                 
-                            <a className="btn btn-outline-dark order " href={`/our-menu/product/${prod.id}`}>
+                            <a className="btn btn-outline-dark order " href={`/our-menu/product/${prod.id}`} style={{borderRadius: '0px'}}>
                             Order Now <i className="fas fa-cart-plus ml-1"></i>
                         </a>
                             

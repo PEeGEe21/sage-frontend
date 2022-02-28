@@ -67,8 +67,7 @@ export default class Testimonial extends Component {
                         <div className="card h-100">
                             <div className="card-body ">
                                 <p className="mb-4 qoute">
-                                    Create an account and start enjoying our service fetbntrny 
-                                    bebebe ergeh th ethth th eheth ththr ehe heththehthth
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt provident accusamus corrupti cupiditate quidem reiciendis impedit alias aliquid dicta.
                                 </p>
                                 
                             </div>
@@ -95,8 +94,7 @@ export default class Testimonial extends Component {
                         <div className="card h-100">
                             <div className="card-body ">
                                 <p className="mb-4 qoute">
-                                    Create an account and start enjoying our service fetbntrny 
-                                    bebebe ergeh th ethth th eheth ththr ehe heththehthth
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt provident accusamus corrupti cupiditate quidem reiciendis impedit alias aliquid dicta.
                                 </p>
                                 
                             </div>
@@ -125,8 +123,7 @@ export default class Testimonial extends Component {
                         <div className="card h-100">
                             <div className="card-body ">
                                 <p className="mb-4 qoute">
-                                    Create an account and start enjoying our service fetbntrny 
-                                    bebebe ergeh th ethth th eheth ththr ehe heththehthth
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt provident accusamus corrupti cupiditate quidem reiciendis impedit alias aliquid dicta.
                                 </p>
                                 
                             </div>
@@ -152,8 +149,7 @@ export default class Testimonial extends Component {
                         <div className="card h-100">
                             <div className="card-body ">
                                 <p className="mb-4 qoute">
-                                    Create an account and start enjoying our service fetbntrny 
-                                    bebebe ergeh th ethth th eheth ththr ehe heththehthth
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt provident accusamus corrupti cupiditate quidem reiciendis impedit alias aliquid dicta.
                                 </p>
                                 
                             </div>
@@ -179,8 +175,7 @@ export default class Testimonial extends Component {
                         <div className="card h-100">
                             <div className="card-body ">
                                 <p className="mb-4 qoute">
-                                    Create an account and start enjoying our service fetbntrny 
-                                    bebebe ergeh th ethth th eheth ththr ehe heththehthth
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt provident accusamus corrupti cupiditate quidem reiciendis impedit alias aliquid dicta.
                                 </p>
                                 
                             </div>

@@ -5,6 +5,8 @@
     /* transform: translateX(15px); */
     position: absolute;
     will-change: transform;
+    display: none;
+
     /* top: 0px;
     left: 0px; */
     /* transform: translate3d(-266px, 64px, 0px); */
@@ -82,14 +84,26 @@
 }
 
 .kt-quick-search.kt-quick-search--inline .kt-quick-search__form {
-    margin: 0 1.5rem;
-    padding: 1rem 0;
+    /* margin: 0 1.5rem; */
+    /* padding: 1rem 0; */
+    /* padding-left: 15px; */
     background-color: #fff;
+}
+.kt-quick-search.kt-quick-search--inline .kt-quick-search__form input {
+    /* margin: 0 1.5rem; */
+    /* padding: 1rem 0; */
+    padding-left: 15px;
+    /* background-color: #fff; */
 }
 
 
 .kt-quick-search .kt-quick-search__form .input-group {
     background-color: transparent;
+}
+
+.kt-quick-search .kt-quick-search__form .input-group button {
+    border: none;
+    height: 100%;
 }
 
 .kt-quick-search .kt-quick-search__form .input-group-prepend, .kt-quick-search .kt-quick-search__form .input-group-append {

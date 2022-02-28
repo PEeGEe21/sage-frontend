@@ -112,7 +112,7 @@ class PopularProducts extends Component {
                             <h2>Popular Products</h2>
                         </div>
                         <div className="col-12">
-                            <p>Create an account and start enjoying our service fetbntrny bebebe ergeh th ethth th eheth ththr ehe</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, a deserunt quaerat quidem ut officiis!</p>
                         </div>
                     </div>
 
@@ -127,56 +127,56 @@ class PopularProducts extends Component {
                         <div className="col-lg-7">
                             <div className="row">
                             {this.state.productsData.sort(()=> Math.random() - Math.random())
-                    .slice(0, 3).map((prod, i)=>(
-                        <div className="col-lg-12 col-md-6 col-sm-12" key={prod.id}>
-                            <div className="item p-3">
+                                .slice(0, 3).map((prod, i)=>(
+                                    <div className="col-lg-12 col-md-6 col-sm-12" key={prod.id}>
+                                        <div className="item p-3">
 
-                                <div className="media d-flex align-items-center justify-space-between">
-                                    <div className="kt-widget5__pic"> 
-                                        <a href={`/our-menu/product/${prod.id}`}>
-                                            <img  className="mr-2 img-fluid cat-img-loop img-sty" src={prod.image} alt={prod.name}  />
-                                        </a>
-                                    </div>
-                                    <div className="media-body">
-                                        {/* <div className="card-body "> */}
-                                        <h4>
-                                        <a href={`/our-menu/product/${prod.id}`}>
+                                            <div className="media d-flex align-items-center justify-space-between">
+                                                <div className="kt-widget5__pic"> 
+                                                    <a href={`/our-menu/product/${prod.id}`}>
+                                                        <img  className="mr-2 img-fluid cat-img-loop img-sty" src={prod.image} alt={prod.name}  />
+                                                    </a>
+                                                </div>
+                                                <div className="media-body">
+                                                    {/* <div className="card-body "> */}
+                                                    <h4>
+                                                    <a href={`/our-menu/product/${prod.id}`}>
 
-                                                {prod.name}
-                                            </a>
-                                            </h4>
-                                        <div className=" my-2">
-                                            <span className="mr-3" style={{marginRight:"10px"}}>
-                                                <del> $<span>{prod.deleted_price}</span> </del>
-                                            </span>
+                                                            {prod.name}
+                                                        </a>
+                                                        </h4>
+                                                    <div className=" my-2">
+                                                        <span className="mr-3" style={{marginRight:"10px"}}>
+                                                            <del> $<span>{prod.deleted_price}</span> </del>
+                                                        </span>
 
-                                            {prod.price ? <span className="kt-widget5__desc pl-4">
-                                            $<span>{ prod.price}</span>
-                                            </span>: (
-                                                <span className="bg-danger text-white p-2">No price yet</span> 
-                                            )}
-                                        </div>
-                                            <p className="kt-widget5__desc">
-                                                {prod.short_description}
-                                            </p>
-                                            <div className=" pop_prod_btns d-flex justify-space-between menu-btns align-items-center mt-3"> 
-                                                {/* <button className="btn btn-outline-dark "><i className="far fa-heart"></i></button> */}
+                                                        {prod.price ? <span className="kt-widget5__desc pl-4">
+                                                        $<span>{ prod.price}</span>
+                                                        </span>: (
+                                                            <span className="bg-danger text-white p-2">No price yet</span> 
+                                                        )}
+                                                    </div>
+                                                        <p className="kt-widget5__desc">
+                                                            {prod.short_description}
+                                                        </p>
+                                                        <div className=" pop_prod_btns d-flex justify-space-between menu-btns align-items-center mt-3"> 
+                                                            {/* <button className="btn btn-outline-dark "><i className="far fa-heart"></i></button> */}
 
-                                                <LikeButton /> 
+                                                            <LikeButton /> 
 
-                                                
-                                                <a className="btn btn-outline-dark order" href={`/our-menu/product/${prod.id}`} style={{padding: '5px 15px', width: 'auto', borderRadius: '2px'}}>
-                                                    <i className="fas fa-cart-plus ml-1"></i>
-                                                </a>
+                                                            
+                                                            <a className="btn btn-outline-dark order" href={`/our-menu/product/${prod.id}`} style={{padding: '5px 15px', width: 'auto', borderRadius: '2px'}}>
+                                                                <i className="fas fa-cart-plus ml-1"></i>
+                                                            </a>
+                                                        
+                                                        </div> 
+
+                                                    </div>
+                                                </div>
                                             
-                                            </div> 
-
                                         </div>
                                     </div>
-                                
-                            </div>
-                        </div>
-                    ))}
+                                ))}
                             </div>
                         </div>
                         

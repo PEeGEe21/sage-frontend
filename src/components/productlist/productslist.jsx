@@ -40,6 +40,7 @@ const ProductsList = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [sort, setSort] = useState("Latest")
     const [filters, setFilters] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
 
     const handleFilters = (e) =>{
         const value = e.target.value;
@@ -50,17 +51,24 @@ const ProductsList = () => {
     }
 
     // const res = await axios.get( "http://localhost:8000/api/products/" );
+    
 
     useEffect(()=>{
         const getProducts = async ()=>{
+            setIsLoading(false)
             try{
+                
                 const res = await axios.get( "https://sage-server.herokuapp.com/api/products/" );
                     // const res = await axios.get( "http://localhost:8000/api/products/" );
-
+                    
                 setProducts(res.data)
                 // console.log(res)
+                
             }catch(err){}
+            // setIsLoading(false);
+            
         };
+        
         getProducts()
     }, [products])
 
@@ -112,7 +120,7 @@ const ProductsList = () => {
                                 </Filter>
                             </FilterContainer> */}
 
-                    <Products products={products} filteredProducts={filteredProducts}/>
+                    <Products products={products} filteredProducts={filteredProducts} isLoading={isLoading}/>
                     <ContentArea />
                     {/* <ScrollToTop /> */}
                     <Footer/>

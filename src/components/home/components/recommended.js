@@ -36,7 +36,8 @@ class Recommended extends Component {
         usersToShow: 0,
         expanded: false,
         userExpanded: false,
-        color: false
+        color: false,
+        isLoading: true
     };
 
     this.showMore = this.showMore.bind(this);
@@ -77,18 +78,21 @@ class Recommended extends Component {
 
   componentDidMount() {
     axios
-      // .get('http://127.0.0.1:8000/api/products/?is_recommended=True')
-      .get('https://sage-server.herokuapp.com/api/products/?is_recommended=True')
-      .then((response) => {
+    .get('https://sage-server.herokuapp.com/api/products/?is_recommended=True')
+    // .get('http://127.0.0.1:8000/api/products/?is_recommended=True')
+    .then((response) => {
           // console.log(response.data)
         this.setState({
             productsData: response.data,
+        });
+        this.setState({
+            isLoading: false
         });
 
         // console.log(this.state.productsData);
       })
       .catch((error) => {
-        console.log('Error');
+        
       });
 
     this.getPopularProducts();
@@ -162,6 +166,19 @@ class Recommended extends Component {
                         > */}
                         <div className="row recommended">
                         {/* {RecommendedProducts.sort(()=> Math.random() - Math.random()) */}
+
+                        {this.state.isLoading ?  
+                            <span className="text-center">
+                            <Spinner
+                                  animation="border"
+                                  variant="secondary"
+                                  size="xl"
+                                  role="status"
+                                  aria-hidden="true"
+                                /> </span> 
+                                : <span></span>
+                            
+                            }
                         
                         {this.state.productsData.sort(()=> Math.random() - Math.random())
                           .slice(0, 4).map((prod, i)=>(

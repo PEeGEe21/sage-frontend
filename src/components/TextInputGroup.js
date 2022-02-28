@@ -12,7 +12,7 @@ const TextInputGroup = ({
   error,
   text,
   id,
-  autocomplete,
+  autoComplete,
 }) => {
   return (
     <div className="form-group">
@@ -27,7 +27,7 @@ const TextInputGroup = ({
         value={value}
         onChange={onChange}
         id={id}
-        autocomplete={autocomplete}
+        autoComplete={autoComplete}
       />
       <label htmlFor={id}>{label}</label>
       {error && <div className="invalid-feedback">{error}</div>}
@@ -50,7 +50,7 @@ TextInputGroup.propTypes = {
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
   text: PropTypes.string,
-  autocomplete: PropTypes.string,
+  autoComplete: PropTypes.string,
   
 };
 

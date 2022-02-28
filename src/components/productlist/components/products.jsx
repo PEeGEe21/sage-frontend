@@ -8,12 +8,13 @@ import './ourMenu.css'
 
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect} from 'react';
+import { Spinner } from 'react-bootstrap';
 
 
 
 
 
-const Products = ({products, filteredProducts}) => {
+const Products = ({products, filteredProducts, isLoading}) => {
     const location = useLocation();
     // console.log(filteredProducts)
     
@@ -87,6 +88,21 @@ const Products = ({products, filteredProducts}) => {
                     <div className="kt-portlet container">
                         
                         <div className="row">
+                             {isLoading ==true ? 
+                                <span className="text-center">
+                                    <Spinner
+                                        animation="border"
+                                        variant="secondary"
+                                        size="xl"
+                                        role="status"
+                                        aria-hidden="true"
+                                        /> 
+                                </span>
+
+                                : <span></span>
+                            
+                            }
+
                                 {getProductRow()}
                         </div>
 

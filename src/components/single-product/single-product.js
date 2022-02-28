@@ -17,6 +17,8 @@ import { useState, useEffect} from 'react';
 import {axios} from 'axios'
 import { publicRequest } from '../requestMethods'
 import ScrollToTop from '../layout/scrollToTop'
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const SingleProduct = () => {
 
@@ -35,7 +37,7 @@ const SingleProduct = () => {
                 
                 setProduct(res.data);
                 setCat(res.data.category)
-                console.log(cat, "cattt");
+                // console.log(cat, "cattt");
                 
             }catch{
 
@@ -46,6 +48,7 @@ const SingleProduct = () => {
 
     return(
         <React.Fragment>
+            <Toaster/>
             <div className="home   header-sticky  header-v5 hide-topbar-mobile">
                 <div id="page" className="hfeed site">
                     <Navbar />
@@ -60,7 +63,7 @@ const SingleProduct = () => {
 
                                         <Reviews product={product} props={product}></Reviews>
 
-                                        {/* <RelatedProducts product={product} cat={cat}></RelatedProducts> */}
+                                        <RelatedProducts product={product} cat={cat}></RelatedProducts>
                                         
                                     </div>
                                 </div>

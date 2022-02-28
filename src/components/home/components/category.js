@@ -27,6 +27,7 @@ class Category extends Component {
             usersToShow: 0,
             expanded: false,
             userExpanded: false,
+            isLoading: true,
         };
       }
 
@@ -72,6 +73,9 @@ class Category extends Component {
 
 
       componentDidMount(){
+        // this.setState({
+        //     isLoading: true
+        // });
           axios
             .get('https://sage-server.herokuapp.com/api/category')
             .then((response) => {
@@ -79,11 +83,20 @@ class Category extends Component {
                 this.setState({
                     categoriesData: response.data,
                 });
+                this.setState({
+                    isLoading: false
+                });
+        
                 // console.log(categories);
             })
             .catch((error) => {
                 
-      });
+        }
+        
+        );
+
+        
+        
       }
     //   return CategoryItems.sort(()=> Math.random() - Math.random()).slice(0, 6).map((cat, i)=>{
 
@@ -136,14 +149,14 @@ class Category extends Component {
                                 <h2>Categories</h2>
                             </div>
                             <div className="col-12">
-                                <p>Create an account and start enjoying our service fetbntrny bebebe ergeh th ethth th eheth ththr ehe</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur praesentium commodi fuga deleniti, placeat alias.</p>
                             </div>
       
                             
                         </div>
 
                         <div className="row category d-flex justify-content-center align-items-center">
-                            {/* {this.state.categoriesData == null ? this.getCategoryRow() : 
+                            {this.state.isLoading ?  
                             <span className="text-center">
                             <Spinner
                                   animation="border"
@@ -151,9 +164,10 @@ class Category extends Component {
                                   size="xl"
                                   role="status"
                                   aria-hidden="true"
-                                /> </span>
+                                /> </span> 
+                                : <span></span>
                             
-                            } */}
+                            }
 
                             {this.getCategoryRow()}
                         </div>

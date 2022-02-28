@@ -39,6 +39,7 @@ import ErrorPage from './components/error-page/error_page';
 
 import { useSelector } from 'react-redux';
 import Success from './components/success';
+import Search from './components/search/search';
 
 
 
@@ -81,6 +82,7 @@ const App = () => {
 
                 <Route exact path="/our-menu" component={ProductsList} />
                 <Route exact path="/success" component={Success} />
+                <Route exact path="/search" component={Search} />
                 <Route path="*" component={ErrorPage} />,
 
               </Switch>

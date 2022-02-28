@@ -116,8 +116,8 @@ class SignUp extends Component {
                             placeholder="Firstname"
                             defaultValue={this.state.first_name}
                             onChange={this.handleChange}
-                            error={errors.first_name}
-                            autocomplete="off"
+                            error={errors.first_name} 
+                            autoComplete="off"
                           />
                           <TextInputGroup
                             id="last_name"
@@ -129,7 +129,7 @@ class SignUp extends Component {
                             defaultValue={this.state.last_name}
                             onChange={this.handleChange}
                             error={errors.last_name}
-                            autocomplete="off"
+                            autoComplete="off"
                           />
                           <TextInputGroup
                             id="email"
@@ -140,8 +140,8 @@ class SignUp extends Component {
                             placeholder="Email"
                             defaultValue={this.state.email}
                             onChange={this.handleChange}
-                            error={errors.email}
-                            autocomplete="off"
+                            error={errors.email} 
+                            autoComplete="off"
                           />
                           <TextInputGroup
                             id="username"
@@ -152,8 +152,8 @@ class SignUp extends Component {
                             placeholder="Username"
                             defaultValue={this.state.username}
                             onChange={this.handleChange}
-                            error={errors.username}
-                            autocomplete="off"
+                            error={errors.username} 
+                            autoComplete="off"
                           />
                           <TextInputGroup
                             id="password"

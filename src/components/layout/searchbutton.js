@@ -18,7 +18,7 @@ const SearchButton = () => {
             </a>
 
             <div className={cn("kt-quick-search kt-quick-search--inline", {search})} id="kt_quick_search_inline">
-                <form method="get" className="kt-quick-search__form">
+                <form method="get" className="kt-quick-search__form" action="/search">
                     <div className="input-group">
                         {/* <div className="input-group-prepend">
                             <span className="input-group-text">
@@ -26,14 +26,14 @@ const SearchButton = () => {
                             </span>
                         </div> */}
                         
-                        <input type="text" className="form-control kt-quick-search__input" placeholder="Search..."/>
+                        <input type="text" className="form-control kt-quick-search__input" placeholder="Search..." name="query"/>
 
                         <div className="input-group-append">
-                        {/* <button class="btn btn-primary" type="submit"> */}
-                        <span className="input-group-text">
-                            <i className="fa fa-search" aria-hidden="true"></i>
-                            </span>                        
-                        {/* </button> */}
+                        <button className="" type="submit">
+                            <span className="input-group-text">
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                                </span>                        
+                            </button>
                             
                         </div>
                         {/* <div className="input-group-append">

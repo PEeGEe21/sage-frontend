@@ -191,7 +191,7 @@ const Cart = () =>{
         const makeRequest = async () => {
             try{
                 const res = await axios.post(
-                    "http://localhost:8000/api/payment/", {
+                    "https://sage-server.herokuapp.com/api/payment/", {
                         tokenId: stripeToken.id,
                         amount: cart.total,
                         description : `Total payment is $${cart.total}`,

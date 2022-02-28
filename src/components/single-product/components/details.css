@@ -95,3 +95,9 @@
         padding-right: 15px; 
       }
 }
+
+
+.woocommerce ul.products li.product a img {
+    height: 270px;
+    width: 100%;
+}

@@ -130,7 +130,7 @@ const LogIn = () =>{
                               defaultValue={state.username}
                               onChange={(e) => setUsername(e.target.value)}
                               error={errors.username}
-                              autocomplete="off"
+                              autoComplete="off"
                             />
                             <TextInputGroup
                               id="password"
