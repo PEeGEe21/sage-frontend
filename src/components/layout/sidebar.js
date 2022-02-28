@@ -56,7 +56,7 @@ function MobileNav() {
                     </li> */}
                     <li className="extra-menu-item last-child">
                         <form method="get" className="sidebar-search-form" action="/search">
-                            <input className="search-field" placeholder="Search..." defaultValue="" name="query" type="search"/>
+                            <input className="search-field" placeholder="Search..." defaultValue="" name="query" type="search" autoComplete="false"/>
                             <button className="search-btn" type="submit">
                                 <i className="fa fa-search" aria-hidden="true"></i>
                             </button>

@@ -26,7 +26,7 @@ const SearchButton = () => {
                             </span>
                         </div> */}
                         
-                        <input type="text" className="form-control kt-quick-search__input" placeholder="Search..." name="query"/>
+                        <input type="text" className="form-control kt-quick-search__input" placeholder="Search..." name="query" autoComplete="false"/>
 
                         <div className="input-group-append">
                         <button className="" type="submit">
