@@ -83,6 +83,7 @@ const ProductDetails = ({product})=>{
                         <a href={product.image} className="img-pop-up main">
                             <img src={product.image} alt="" className=""/>
                         </a>
+
                         <a href={product.featured_image1} className="img-pop-up t-one">
                             <img src={product.featured_image1} alt="" className=""/>
                         </a>
@@ -90,8 +91,8 @@ const ProductDetails = ({product})=>{
                         <a href={product.featured_image2} className="img-pop-up t-two">
                             <img src={product.featured_image2} alt="" className=""/>
                         </a>
-                        <a href={product.featured_image3} className="img-pop-up t-three">
 
+                        <a href={product.featured_image3} className="img-pop-up t-three">
                             <img src={product.featured_image3} alt="" className=""/>
                         </a>
 
