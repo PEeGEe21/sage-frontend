@@ -42,10 +42,12 @@ const cartSlice = createSlice({
                 state.products.findIndex((item)=>item._id === action.payload.id),1
             );
 
+
+
             // state.products.pop(
-            //     state.products.findIndex((item)=>item._id === action.payload.id),1
+                // state.products.filter((item)=>item._id === action.payload.id),1
             // );
-            state.total -= action.payload.price;
+            // state.total -= action.payload.price;
 
             // const { id } = action.payload; 
             // console.log(id);

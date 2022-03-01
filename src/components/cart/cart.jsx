@@ -55,6 +55,7 @@ const Cart = () =>{
     const [states, setStates] = useState('')
     const [billAddress, setBillAddress] = useState('')
     const [meals, setMeals] = useState()
+    const [products, setProducts] = useState()
     // cart.products
     const handleChange = (event) => {
         setStates(event.target.value);
@@ -77,6 +78,11 @@ const Cart = () =>{
     //         [e.target.name]:value
     //     });
     // }
+    // const handleRemove = (id) =>{
+    //     cart = cart.filter((item) => item.id !== id);
+    //     // deleteProduct(id, dispatch)
+    // }
+
     const getcartproduct = () =>{
         return cart.products.map((prod)=>{
     
@@ -105,7 +111,7 @@ const Cart = () =>{
                     </td>
                     {/* <td width="15%">
                         <div className=" remove_btn d-flex align-items-center justify-content-start">
-                        <ClearRounded /> <span className="ml-3">Remove</span>
+                        <ClearRounded onClick={()=>handleRemove(prod.id)}/> <span className="ml-3">Remove</span>
                         </div>
                     </td> */}
 

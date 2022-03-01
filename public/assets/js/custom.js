@@ -114,6 +114,18 @@ $(document).ready(function()
 		}
 	}
 
+	//magnific pop up
+
+	var popUp = $('.single_gallery_part, .img-pop-up');
+      if(popUp.length){
+        popUp.magnificPopup({
+          type: 'image',
+          gallery:{
+            enabled:true
+          }
+        });
+      }
+
 	/* 
 
 	4. Init Header Search

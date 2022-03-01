@@ -204,9 +204,10 @@ class SideBar extends Component {
         <aside id="primary-sidebar" className="widgets-area primary-sidebar shop-sidebar col-xs-12 col-sm-12 col-md-4">
             <div className="induscity-widget">
                 <div className="widget woocommerce widget_product_search">
-                    <form className="woocommerce-product-search">
-                        <input type="search" className="search-field" placeholder="Search products…" defaultValue=""/>
+                    <form method="get" className="woocommerce-product-search" action="/search">
+                        <input type="search" className="search-field" placeholder="Search meals..." defaultValue="" name="query"/>
                         <input type="submit" defaultValue="Search"/>
+                        {/* <button type="submit"><i className="fa fa-search"></i></button> */}
 
                     </form>
                 </div>

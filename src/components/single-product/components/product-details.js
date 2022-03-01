@@ -80,10 +80,21 @@ const ProductDetails = ({product})=>{
             <div className="mf-product-details clearfix">
                 <div className="product-image">
                     <div className="gallery">
-                        <img src={product.image} alt="" className="main"/>
-                        <img src={product.featured_image1} alt="" className="t-one"/>
-                        <img src={product.featured_image2} alt="" className="t-two"/>
-                        <img src={product.featured_image3} alt="" className="t-three"/>
+                        <a href={product.image} className="img-pop-up main">
+                            <img src={product.image} alt="" className=""/>
+                        </a>
+                        <a href={product.featured_image1} className="img-pop-up t-one">
+                            <img src={product.featured_image1} alt="" className=""/>
+                        </a>
+
+                        <a href={product.featured_image2} className="img-pop-up t-two">
+                            <img src={product.featured_image2} alt="" className=""/>
+                        </a>
+                        <a href={product.featured_image3} className="img-pop-up t-three">
+
+                            <img src={product.featured_image3} alt="" className=""/>
+                        </a>
+
                         {/* {user ? <span>user logged in</span>:  <span> user not logged in</span>} */}
                         {/* {product.featured_image3 && <img src={product.featured_image3} alt="" className="t-three"/>} */}
                         {/* <img src={product.featured_image2} alt="" className="t-three"/> */}
